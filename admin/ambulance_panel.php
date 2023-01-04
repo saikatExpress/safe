@@ -1,6 +1,39 @@
 <?php include_once 'include/header.php'; ?>
 
 
+<?php
+
+$db = new DataBase();
+
+
+
+if (isset($_POST['submit'])) {
+    $cat = 'ambulance';
+    $ambulance = $_POST['ambulance'];
+    $conNumber = $_POST['conNumber'];
+    $divisions = $_POST['divisions'];
+    $districts = $_POST['districts'];
+    $latitude = $_POST['latitude'];
+    $longitude = $_POST['longitude'];
+    $locations = $_POST['locations'];
+    $website = $_POST['website'];
+    $pmap = $_POST['pmap'];
+    $id = $_SESSION['id'];
+
+    $query = "INSERT INTO police_station(admin_category,p_name,p_contact,p_divisions,p_districts,p_latitude,p_longitutde,p_location,p_website,p_map,u_id)VALUES('$cat','$ambulance','$conNumber','$divisions','$districts','$latitude','$longitude','$locations','$website','$pmap','$id')";
+
+
+    $data = $db->insert($query);
+    if ($data) {
+        echo "Save Successfully";
+    } else {
+        echo "Something Wrong";
+    }
+}
+
+
+?>
+
 
 <div class="ambulance_block_panel">
     <div class="create_button">

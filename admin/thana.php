@@ -6,6 +6,7 @@
 $db = new DataBase();
 
 if (isset($_POST['submit'])) {
+    $cat = "police";
     $thana = $_POST['thana'];
     $conNumber = $_POST['conNumber'];
     $divisions = $_POST['divisions'];
@@ -17,7 +18,7 @@ if (isset($_POST['submit'])) {
     $pmap = $_POST['pmap'];
     $id = $_SESSION['id'];
 
-    $query = "INSERT INTO police_station(p_name,p_contact,p_divisions,p_districts,p_latitude,p_longitutde,p_location,p_website,p_map,u_id)VALUES('$thana','$conNumber','$divisions','$districts','$latitude','$longitude','$locations','$website','$pmap','$id')";
+    $query = "INSERT INTO police_station(admin_category,p_name,p_contact,p_divisions,p_districts,p_latitude,p_longitutde,p_location,p_website,p_map,u_id)VALUES('$cat','$thana','$conNumber','$divisions','$districts','$latitude','$longitude','$locations','$website','$pmap','$id')";
 
     $data = $db->insert($query);
 
@@ -111,7 +112,8 @@ if (isset($_POST['submit'])) {
 
         $query = "SELECT * FROM police_station
         LEFT JOIN thana_admin ON police_station.p_id = thana_admin.police_station_id
-         ORDER BY p_name";
+        WHERE police_station.admin_category = 'police'
+         ORDER BY police_station.p_name";
 
         $data = $db->select($query);
 
