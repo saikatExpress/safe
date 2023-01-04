@@ -21,39 +21,128 @@ if (!empty($_GET['c_id'])) {
 
         $db = new DataBase();
 
-        $query1 = "SELECT * FROM complains
-        LEFT JOIN action_complain ON complains.c_id = action_complain.complainId
-        LEFT JOIN user_reg ON complains.u_id = user_reg.id
-         WHERE complains.category = 'police' ORDER BY complains.c_id DESC";
-        $data1 = $db->select($query1);
-        foreach ($data1 ?: [] as $value1) { ?>
+
+        $query2 = "SELECT * FROM complains WHERE c_id = '$cid'";
+        $data2 = $db->select($query2);
+        foreach ($data2 ?: [] as $value2) {
+            $comcategory = $value2['category'];
+
+            if ($comcategory == 'police') {
+
+                $query1 = "SELECT * FROM complains
+                LEFT JOIN action_complain ON complains.c_id = action_complain.complainId
+                LEFT JOIN user_reg ON complains.u_id = user_reg.id
+                 WHERE complains.category = 'police' ORDER BY complains.c_id DESC";
+                $data1 = $db->select($query1);
+                foreach ($data1 ?: [] as $value1) { ?>
 
         <?php
 
-            $cid = $value1['c_id'];
-            $aid = $value1['complainId'];
+                    $cid = $value1['c_id'];
+                    $aid = $value1['complainId'];
 
-            $date = date_create($value1['complain_time']);
-            $dateFormat = date_format($date, 'd M');
-            $timeFormat = date_format($date, 'h:ia');
+                    $date = date_create($value1['complain_time']);
+                    $dateFormat = date_format($date, 'd M');
+                    $timeFormat = date_format($date, 'h:ia');
 
-            ?>
+                    ?>
 
 
         <?php
 
-            if ($cid != $aid) { ?>
+                    if ($cid != $aid) { ?>
         <a href="complain.php?c_id=<?php echo $cid; ?>"><span style="font-size:12px; color:cornsilk;"><?= $dateFormat ?>
                 , <?= $timeFormat ?>
             </span> <br><?= $value1['firstname'] . " " . $value1['lastname'] ?></a>
         <?php  }
 
-            ?>
+                    ?>
 
 
 
         <?php }
+            }
+        }
 
+
+        /**1
+
+        if ($comcategory == 'firservice') {
+
+            $query1 = "SELECT * FROM complains
+        LEFT JOIN action_complain ON complains.c_id = action_complain.complainId
+        LEFT JOIN user_reg ON complains.u_id = user_reg.id
+         WHERE complains.category = 'firservice' ORDER BY complains.c_id DESC";
+            $data1 = $db->select($query1);
+            foreach ($data1 ?: [] as $value1) { ?>
+
+        <?php
+
+                $cid = $value1['c_id'];
+                $aid = $value1['complainId'];
+
+                $date = date_create($value1['complain_time']);
+                $dateFormat = date_format($date, 'd M');
+                $timeFormat = date_format($date, 'h:ia');
+
+                ?>
+
+
+        <?php
+
+                if ($cid != $aid) { ?>
+        <a href="complain.php?c_id=<?php echo $cid; ?>"><span style="font-size:12px; color:cornsilk;"><?= $dateFormat ?>
+                , <?= $timeFormat ?>
+            </span> <br><?= $value1['firstname'] . " " . $value1['lastname'] ?></a>
+        <?php  }
+
+                ?>
+
+
+
+        <?php }
+        }
+
+         **/
+
+
+        /** 
+        if ($comcategory == 'ambulance') {
+            $query1 = "SELECT * FROM complains
+            LEFT JOIN action_complain ON complains.c_id = action_complain.complainId
+            LEFT JOIN user_reg ON complains.u_id = user_reg.id
+             WHERE complains.category = 'ambulance' ORDER BY complains.c_id DESC";
+            $data1 = $db->select($query1);
+            foreach ($data1 ?: [] as $value1) { ?>
+
+        <?php
+
+                $cid = $value1['c_id'];
+                $aid = $value1['complainId'];
+
+                $date = date_create($value1['complain_time']);
+                $dateFormat = date_format($date, 'd M');
+                $timeFormat = date_format($date, 'h:ia');
+
+                ?>
+
+
+        <?php
+
+                if ($cid != $aid) { ?>
+        <a href="complain.php?c_id=<?php echo $cid; ?>"><span style="font-size:12px; color:cornsilk;"><?= $dateFormat ?>
+                , <?= $timeFormat ?>
+            </span> <br><?= $value1['firstname'] . " " . $value1['lastname'] ?></a>
+        <?php  }
+
+                ?>
+
+
+
+        <?php }
+        }
+
+         **/
         ?>
 
 
@@ -116,6 +205,7 @@ WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
 
             <p><span><?php echo $value['gender']; ?></span></p>
             <h6>Category : <b><?php echo $value['category']; ?></b></h6>
+
         </div>
         <?php }
         }
@@ -139,6 +229,8 @@ WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
         <a href="https://www.gps-coordinates.net/" target="_blank">click</a>
     </div>
     -->
+
+
     <div class="complain_action">
 
 

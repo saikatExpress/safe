@@ -195,7 +195,7 @@ Session::checkSession();
                 </div>
 
                 <div class="menu_item">
-                    <a href="">
+                    <a href="ambulance_panel.php">
                         <div class="menu_icon">
                             <i class="fa fa-ambulance" aria-hidden="true"></i>
                         </div>
