@@ -113,7 +113,15 @@ Session::checkSession();
                     </div>
 
                     <div class="dashborad_div_item">
-                        <a href="">Fire Service</a>
+                        <a href="fireservice.php">
+                            <h4>Fire Service</h4>
+                        </a>
+                    </div>
+
+                    <div class="dashborad_div_item">
+                        <a href="ambulance.php">
+                            <h4>Ambulance</h4>
+                        </a>
                     </div>
 
                     <div class="dashborad_div_item">

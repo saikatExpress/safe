@@ -58,13 +58,13 @@ WHERE complains.c_id = '$cId'";
 
 
             <p>
-                <span>Operation by : </span> <?php
-                                                if ($value['complain_comment'] == '') {
-                                                    echo "Operation running";
-                                                } else {
-                                                    echo $value['complain_comment'];
-                                                }
-                                                ?>
+                <span>Operation status : </span> <?php
+                                                    if ($value['complain_comment'] == '') {
+                                                        echo "Operation running";
+                                                    } else {
+                                                        echo $value['complain_comment'];
+                                                    }
+                                                    ?>
             </p>
 
 

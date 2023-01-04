@@ -3,40 +3,53 @@
 
 
 
-
-
-
-
 <div class="pending_block">
-    <h2 class="succHead">Pending List</h2>
-    <span></span>
+
     <?php
 
     $db = new DataBase();
 
-    $query = "SELECT * FROM action_complain WHERE complain_category = 'police'";
+    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'fireservice'";
+    $data2 = $db->select($query2);
+    foreach ($data2 ?: [] as $value2) {
+    }
+
+
+    ?>
+
+    <h2 class="succHead">
+        Success List
+        <span><?= $value2['REPID'] ?></span>
+    </h2>
+    <?php
+
+    $db = new DataBase();
+
+    $query = "SELECT * FROM complain_feedback WHERE complain_categories = 'fireservice'";
 
     $data = $db->select($query);
 
     foreach ($data ?: [] as $value) {
-        $comID = $value['complainId'];
-        $polID = $value['police_station_id'];
+        $comID = $value['com_id'];
+        $polID = $value['pol_id'];
 
 
 
         $query1 = "SELECT * FROM complains
 LEFT JOIN user_reg ON complains.u_id = user_reg.id 
-LEFT JOIN complain_feedback ON complains.c_id = complain_feedback.com_id
 WHERE complains.c_id = '$comID' ORDER BY complains.c_id DESC ";
 
         $data1 = $db->select($query1);
-        foreach ($data1 ?: [] as $value1) {
+        foreach ($data1 ?: [] as $value1) { ?>
+    <?php
+
             $date = date_create($value1['complain_time']);
             $dateFormat = date_format($date, 'd M');
             $timeFormat = date_format($date, 'h.ia');
-            $comFeed = $value1['com_id'];
+            //$comFeed = $value1['com_id'];
 
-            if ($comID != $comFeed) { ?>
+            ?>
+
     <div class="complain_user_details">
         <div class="my_color">
             <p>
@@ -48,12 +61,12 @@ WHERE complains.c_id = '$comID' ORDER BY complains.c_id DESC ";
         </div>
         <h4><?= $value1['firstname'] . ' ' . $value1['lastname'] ?></h4>
         <h2><?= $value1['mobile'] ?></h2>
-        <mark class="mark_div">Pending</mark>
+        <mark class="mark_div">Success</mark>
         <h5><a href="action_view.php?c_id=<?= $comID ?>">View</a></h5>
 
     </div>
-    <?php }
-        }
+
+    <?php  }
     }
 
 
@@ -63,7 +76,6 @@ WHERE complains.c_id = '$comID' ORDER BY complains.c_id DESC ";
 
 
 </div>
-
 
 
 

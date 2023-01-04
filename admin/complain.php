@@ -65,14 +65,14 @@ if (!empty($_GET['c_id'])) {
         }
 
 
-        /**1
 
-        if ($comcategory == 'firservice') {
+
+        if ($comcategory == 'fireservice') {
 
             $query1 = "SELECT * FROM complains
         LEFT JOIN action_complain ON complains.c_id = action_complain.complainId
         LEFT JOIN user_reg ON complains.u_id = user_reg.id
-         WHERE complains.category = 'firservice' ORDER BY complains.c_id DESC";
+         WHERE complains.category = 'fireservice' ORDER BY complains.c_id DESC";
             $data1 = $db->select($query1);
             foreach ($data1 ?: [] as $value1) { ?>
 
@@ -103,10 +103,9 @@ if (!empty($_GET['c_id'])) {
         <?php }
         }
 
-         **/
 
 
-        /** 
+
         if ($comcategory == 'ambulance') {
             $query1 = "SELECT * FROM complains
             LEFT JOIN action_complain ON complains.c_id = action_complain.complainId
@@ -142,7 +141,6 @@ if (!empty($_GET['c_id'])) {
         <?php }
         }
 
-         **/
         ?>
 
 
@@ -152,6 +150,7 @@ if (!empty($_GET['c_id'])) {
 
 <hr>
 
+<!--Complain with map HTML & php code start from here--->
 
 <div class="user_location_map">
     <h1>
@@ -171,6 +170,13 @@ LEFT JOIN profile_pic ON complains.u_id = profile_pic.u_id
 WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
             $data = $db->select($query);
             foreach ($data ?: [] as $value) { ?>
+
+        <?php
+
+                $category = $value['category'];
+
+                ?>
+
         <div class="complain_details_block">
             <?php
 
@@ -204,7 +210,7 @@ WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
 
 
             <p><span><?php echo $value['gender']; ?></span></p>
-            <h6>Category : <b><?php echo $value['category']; ?></b></h6>
+            <h6>Category : <b><?php echo  $category; ?></b></h6>
 
         </div>
         <?php }
@@ -222,7 +228,7 @@ WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
             </div>
         </div>
     </div>
-
+    <!--Complain with map HTML & php code end from here--->
 
     <!--
     <div class="map_web">
@@ -231,45 +237,49 @@ WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
     -->
 
 
+    <!--Action area based on complain cetegory HTML & PHP code start from here-->
     <div class="complain_action">
 
 
+        <!--Police panel HTML & PHP code start from here-->
+        <?php
 
+        if ($category == 'police') { ?>
         <div class="action_flex">
 
 
             <?php
 
-            $lat = $value['latitude'];
-            $lng = $value['longitude'];
-            $sum = $lat + $lng;
+                $lat = $value['latitude'];
+                $lng = $value['longitude'];
+                $sum = $lat + $lng;
 
 
 
-            $db = new DataBase();
+                $db = new DataBase();
 
-            $query = "SELECT * FROM police_station";
+                $query = "SELECT * FROM police_station WHERE admin_category = 'police'";
 
-            $data = $db->select($query);
+                $data = $db->select($query);
 
-            foreach ($data ?: [] as $value) {
-                $pLat = $value['p_latitude'];
-                $plng = $value['p_longitutde'];
-                $sum1 = $pLat + $plng;
+                foreach ($data ?: [] as $value) {
+                    $pLat = $value['p_latitude'];
+                    $plng = $value['p_longitutde'];
+                    $sum1 = $pLat + $plng;
 
-                $sub = $sum - $sum1;
-
-
+                    $sub = $sum - $sum1;
 
 
 
-                if ($sum > $sum1) { ?>
+
+
+                    if ($sum > $sum1) { ?>
 
             <?php
 
 
 
-                    ?>
+                        ?>
 
 
             <div class="action_box_style">
@@ -285,6 +295,8 @@ WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
                     </div>
 
                     <form action="complain_action.php" method="post">
+                        <input type="hidden" class="comCategory" name="comCategory" id="comCategory"
+                            value="<?= $category ?>">
                         <input type="hidden" class="complainId" name="complainId" id="complainId"
                             value="<?php echo $cid; ?>">
                         <input name="police_station_id" id="police_station_id" type="hidden"
@@ -306,19 +318,188 @@ WHERE complains.c_id = '$cid' ORDER BY profile_pic.id DESC LIMIT 1";
 
 
             <?php  } else {
-                    //Something will be happend
+                        //Something will be happend
+                    }
                 }
-            }
 
-            ?>
-
-
-
-
+                ?>
 
         </div>
+        <?php }
+
+
+        ?>
+        <!--Police panel HTML & PHP code end from here-->
+
+
+        <!--For ambulance panel HTML & PHP code start from here-->
+        <?php
+
+        if ($category == 'ambulance') { ?>
+        <div class="action_flex">
+
+
+            <?php
+
+                $lat = $value['latitude'];
+                $lng = $value['longitude'];
+                $sum = $lat + $lng;
+
+
+
+                $db = new DataBase();
+
+                $query = "SELECT * FROM police_station WHERE admin_category = 'ambulance'";
+
+                $data = $db->select($query);
+
+                foreach ($data ?: [] as $value) { ?>
+
+
+
+            <div class="action_box_style">
+                <div class="action_details">
+
+                    <div class="action_station">
+                        <h2>
+                            <?php echo $value['p_name']; ?>
+                        </h2>
+                        <p style="margin-bottom: 0;">
+                            <?= $value['p_contact'] ?>
+                        </p>
+                    </div>
+
+                    <form action="complain_action.php" method="post">
+                        <input type="hidden" class="comCategory" name="comCategory" id="comCategory"
+                            value="<?= $category ?>">
+                        <input type="hidden" class="complainId" name="complainId" id="complainId"
+                            value="<?php echo $cid; ?>">
+                        <input name="police_station_id" id="police_station_id" type="hidden"
+                            value="<?= $value['p_id'] ?>">
+                        <input type="hidden" class="adminId" name="adminId" id="adminId"
+                            value="<?php echo $_SESSION['id']; ?>">
+                        <input type="submit" name="actionForm" value="Action">
+
+                    </form>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+            <?php }
+
+                ?>
+
+        </div>
+        <?php }
+
+
+        ?>
+        <!--For ambulance panel HTML & PHP code end from here-->
+
+
+        <!--For fire service panel HTML & PHP code start from here-->
+
+        <?php
+
+        if ($category == 'fireservice') { ?>
+        <div class="action_flex">
+
+
+            <?php
+
+                $lat = $value['latitude'];
+                $lng = $value['longitude'];
+                $sum = $lat + $lng;
+
+
+
+                $db = new DataBase();
+
+                $query = "SELECT * FROM police_station WHERE admin_category = 'fireservice'";
+
+                $data = $db->select($query);
+
+                foreach ($data ?: [] as $value) {
+                    $pLat = $value['p_latitude'];
+                    $plng = $value['p_longitutde'];
+                    $sum1 = $pLat + $plng;
+
+                    $sub = $sum - $sum1;
+
+
+
+
+
+                    if ($sum > $sum1) { ?>
+
+            <?php
+
+
+
+                        ?>
+
+
+            <div class="action_box_style">
+                <div class="action_details">
+
+                    <div class="action_station">
+                        <h2>
+                            <?php echo $value['p_name']; ?>
+                        </h2>
+                        <p style="margin-bottom: 0;">
+                            <?= $value['p_contact'] ?>
+                        </p>
+                    </div>
+
+                    <form action="complain_action.php" method="post">
+                        <input type="hidden" class="comCategory" name="comCategory" id="comCategory"
+                            value="<?= $category ?>">
+                        <input type="hidden" class="complainId" name="complainId" id="complainId"
+                            value="<?php echo $cid; ?>">
+                        <input name="police_station_id" id="police_station_id" type="hidden"
+                            value="<?= $value['p_id'] ?>">
+                        <input type="hidden" class="adminId" name="adminId" id="adminId"
+                            value="<?php echo $_SESSION['id']; ?>">
+                        <input type="submit" name="actionForm" value="Action">
+
+                    </form>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <?php  } else {
+                        //Something will be happend
+                    }
+                }
+
+                ?>
+
+        </div>
+        <?php }
+
+
+        ?>
+        <!--For fire service panel HTML & PHP code end from here-->
 
     </div>
+
+    <!--Action area based on complain cetegory HTML & PHP code start from here-->
+
 </div>
 
 

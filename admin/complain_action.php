@@ -17,12 +17,12 @@
 
 
     if (isset($_POST['actionForm'])) {
-
+        $comCategory = $_POST['comCategory'];
         $complainId = $_POST['complainId'];
         $police_station_id = $_POST['police_station_id'];
         $adminId = $_POST['adminId'];
 
-        $query = "INSERT  INTO action_complain(complainId,police_station_id,u_id)VALUES('$complainId','$police_station_id','$adminId')";
+        $query = "INSERT  INTO action_complain(complain_category,complainId,police_station_id,u_id)VALUES('$comCategory','$complainId','$police_station_id','$adminId')";
 
         $data = $db->insert($query);
 

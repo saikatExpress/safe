@@ -205,13 +205,14 @@ Session::checkSession();
                     </a>
                 </div>
 
+
                 <div class="menu_item">
-                    <a href="">
+                    <a href="fireservice_panel.php">
                         <div class="menu_icon">
-                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                            <i class="fa fa-fire" aria-hidden="true"></i>
                         </div>
                         <div class="menu_name">
-                            <h4>System Managements</h4>
+                            <h4>Fire Service Panel</h4>
                         </div>
                     </a>
                 </div>

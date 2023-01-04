@@ -25,10 +25,9 @@ if (isset($_GET['cid'])) {
      WHERE complains.c_id='$cid'";
     $data = $db->select($query);
     foreach ($data ?: [] as $value) {
-
+        $category = $value['category'];
         $comId = $value['c_id'];
         $comFeed = $value['com_id'];
-
         $uid = $value['id'];
 
         $query1 = "SELECT * FROM profile_pic WHERE u_id = '$uid'";
@@ -141,6 +140,7 @@ if (isset($_GET['cid'])) {
                     $db = new DataBase();
 
                     if (isset($_POST['comSend'])) {
+                        $comCategory = $_POST['comCategory'];
                         $act = $_POST['act'];
                         $comComment = $_POST['comComment'];
                         $comId = $_POST['comId'];
@@ -148,7 +148,7 @@ if (isset($_GET['cid'])) {
                         $userid = $_POST['userid'];
                         $id = $_SESSION['id'];
 
-                        $query = "INSERT INTO complain_feedback(complain_status,complain_comment,com_id,pol_id,user_id,u_id)VALUES('$act','$comComment','$comId','$polId','$userid','$id')";
+                        $query = "INSERT INTO complain_feedback(complain_categories,complain_status,complain_comment,com_id,pol_id,user_id,u_id)VALUES('$comCategory','$act','$comComment','$comId','$polId','$userid','$id')";
 
                         $data = $db->insert($query);
 
@@ -186,7 +186,8 @@ if (isset($_GET['cid'])) {
                     <?php  } else { ?>
                     <form action="" method="post">
                         <label for="feedback">Give Feedback : </label> <br>
-
+                        <input style="display: none;" type="text" name="comCategory" id="comCategory"
+                            value="<?= $category ?>">
                         <select name="act" id="act">
                             <option value="">Select</option>
                             <option value="success">Success</option>

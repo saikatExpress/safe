@@ -9,7 +9,7 @@
 
     $db = new DataBase();
 
-    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback";
+    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'police'";
     $data2 = $db->select($query2);
     foreach ($data2 ?: [] as $value2) {
     }

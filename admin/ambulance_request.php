@@ -14,7 +14,7 @@
 
     $db = new DataBase();
 
-    $query = "SELECT * FROM action_complain WHERE complain_category = 'police'";
+    $query = "SELECT * FROM action_complain WHERE complain_category = 'ambulance'";
 
     $data = $db->select($query);
 

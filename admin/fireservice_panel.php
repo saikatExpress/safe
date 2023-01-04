@@ -1,6 +1,12 @@
 <?php include_once 'include/header.php'; ?>
 
 
+
+
+
+<?php include_once 'include/header.php'; ?>
+
+
 <?php
 
 $db = new DataBase();
@@ -8,7 +14,7 @@ $db = new DataBase();
 
 
 if (isset($_POST['submit'])) {
-    $cat = 'ambulance';
+    $cat = 'fireservice';
     $ambulance = $_POST['ambulance'];
     $conNumber = $_POST['conNumber'];
     $divisions = $_POST['divisions'];
@@ -38,59 +44,59 @@ if (isset($_POST['submit'])) {
 <div class="ambulance_block_panel">
     <div class="create_button">
         <button type="button" id="policeButton">
-            Create Ambulance Panel <i class="fa fa-plus" aria-hidden="true"></i>
+            Create Fire Service Panel <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
     </div>
 
     <div style="display: none;" id="thanaDiv" class="create_thana_block">
 
         <div class="create_form_style">
-            <h6>Create Ambulance Panel</h6>
+            <h6>Create Fire Service Panel</h6>
             <div class="form_style_blck">
                 <form action="" method="post" enctype="multipart/form-data">
 
                     <div class="create_thana_form">
-                        <label for="ambulance">Ambulance Station Name : </label> <br>
+                        <label for="ambulance">Fire Service Station Name : </label> <br>
                         <input type="text" name="ambulance" id="ambulance">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="conNumber">Ambulance Station Number : </label> <br>
+                        <label for="conNumber">Fire Service Station Number : </label> <br>
                         <input type="text" name="conNumber" id="conNumber">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="divisions">Ambulance Station Division : </label> <br>
+                        <label for="divisions">Fire Service Station Division : </label> <br>
                         <input type="text" name="divisions" id="divisions">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="districts">Ambulance Station District : </label> <br>
+                        <label for="districts">Fire Service Station District : </label> <br>
                         <input type="text" name="districts" id="districts">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="latitude">Ambulance Station Latitude : </label> <br>
+                        <label for="latitude">Fire Service Station Latitude : </label> <br>
                         <input type="text" name="latitude" id="latitude">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="longitude">Ambulance Station Longitude : </label> <br>
+                        <label for="longitude">Fire Service Station Longitude : </label> <br>
                         <input type="text" name="longitude" id="longitude">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="locations">Ambulance Station Location : </label> <br>
+                        <label for="locations">Fire Service Station Location : </label> <br>
                         <input type="text" name="locations" id="locations">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="website">Ambulance Station Website : </label> <br>
+                        <label for="website">Fire Service Station Website : </label> <br>
                         <input type="text" name="website" id="website">
                     </div>
 
                     <div class="create_thana_form">
-                        <label for="pmap">Ambulance Station Map : </label> <br>
+                        <label for="pmap">Fire Service Station Map : </label> <br>
                         <input type="text" name="pmap" id="pmap">
                     </div>
 
@@ -109,7 +115,7 @@ if (isset($_POST['submit'])) {
 
 
 <div class="thana_list">
-    <h2 class="thana_h2">Ambulance Sevice List</h2>
+    <h2 class="thana_h2">Fire Sevice List</h2>
 
     <?php
 
@@ -117,7 +123,7 @@ if (isset($_POST['submit'])) {
 
     $query = "SELECT * FROM police_station
         LEFT JOIN thana_admin ON police_station.p_id = thana_admin.police_station_id
-        WHERE police_station.admin_category = 'ambulance'
+        WHERE police_station.admin_category = 'fireservice'
          ORDER BY police_station.p_name DESC";
 
     $data = $db->select($query);
@@ -189,5 +195,12 @@ policeButton.addEventListener("click", function() {
     }
 })
 </script>
+
+<?php include_once 'include/footer.php'; ?>
+
+
+
+
+
 
 <?php include_once 'include/footer.php'; ?>
