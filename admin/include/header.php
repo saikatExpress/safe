@@ -96,7 +96,7 @@ Session::checkSession();
                 </div>
 
                 <div class="menu_item">
-                    <a href="">
+                    <a href="admin.php">
                         <div class="menu_icon">
                             <i class="fa fa-unlock" aria-hidden="true"></i>
                         </div>
@@ -107,7 +107,7 @@ Session::checkSession();
                 </div>
 
                 <div class="menu_item">
-                    <a href="">
+                    <a href="allComplain.php">
                         <div class="menu_icon">
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                         </div>
@@ -124,6 +124,30 @@ Session::checkSession();
                         </div>
                         <div class="menu_name">
                             <h4>Create Police Station</h4>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="menu_item">
+                    <a href="ambulance_panel.php">
+                        <div class="menu_icon">
+                            <i class="fa fa-ambulance" aria-hidden="true"></i>
+                        </div>
+                        <div class="menu_name">
+                            <h4>Ambulance Panel</h4>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="menu_item">
+                    <a href="fireservice_panel.php">
+                        <div class="menu_icon">
+                            <i class="fa fa-fire" aria-hidden="true"></i>
+                        </div>
+                        <div class="menu_name">
+                            <h4>Fire Service Panel</h4>
                         </div>
                     </a>
                 </div>
@@ -194,28 +218,7 @@ Session::checkSession();
                     </a>
                 </div>
 
-                <div class="menu_item">
-                    <a href="ambulance_panel.php">
-                        <div class="menu_icon">
-                            <i class="fa fa-ambulance" aria-hidden="true"></i>
-                        </div>
-                        <div class="menu_name">
-                            <h4>Ambulance Panel</h4>
-                        </div>
-                    </a>
-                </div>
 
-
-                <div class="menu_item">
-                    <a href="fireservice_panel.php">
-                        <div class="menu_icon">
-                            <i class="fa fa-fire" aria-hidden="true"></i>
-                        </div>
-                        <div class="menu_name">
-                            <h4>Fire Service Panel</h4>
-                        </div>
-                    </a>
-                </div>
 
 
             </div>

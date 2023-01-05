@@ -100,7 +100,7 @@
 
                     $db = new DataBase();
 
-                    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'police'";
+                    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'police' and complain_status = 'success'";
                     $data2 = $db->select($query2);
                     foreach ($data2 ?: [] as $value2) {
                     }
@@ -333,7 +333,7 @@
 
                     $db = new DataBase();
 
-                    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'fireservice'";
+                    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'fireservice' and complain_status = 'success'";
                     $data2 = $db->select($query2);
                     foreach ($data2 ?: [] as $value2) {
                     }
@@ -567,7 +567,7 @@
 
                     $db = new DataBase();
 
-                    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'ambulance'";
+                    $query2 = "SELECT COUNT('complain_rep_id') AS REPID FROM complain_feedback WHERE complain_categories = 'ambulance' and complain_status = 'success'";
                     $data2 = $db->select($query2);
                     foreach ($data2 ?: [] as $value2) {
                     }

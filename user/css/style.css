@@ -98,7 +98,7 @@ body {
 
 .stylish_form input[type="text"],
 input[type="email"],
-input[type="radio"] {
+input[type="password"] {
   padding: 10px;
   margin: 10px;
   background: transparent;
@@ -109,6 +109,13 @@ input[type="radio"] {
   outline-width: medium;
   font-weight: bold;
   outline: none;
+  width: 95%;
+}
+
+.stylish_form input[type="radio"] {
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
 }
 
 .stylish_form input:focus {
@@ -196,7 +203,7 @@ input[type="password"] {
   outline-width: medium;
   font-weight: bold;
   outline: none;
-  width: 88%;
+  width: 95%;
   border-bottom: 2px inset gray;
 }
 
@@ -228,21 +235,6 @@ input[type="password"] {
   box-shadow: 0 0 10px rgb(0, 0, 0.1);
   border-radius: 4px;
   padding: 10px;
-}
-
-.registration_rules {
-  padding: 5px;
-}
-
-.registration_rules h4 {
-  width: 230px;
-  background: black;
-  color: white;
-  box-shadow: 0 0 10px rgb(0, 0, 0.1);
-  padding: 5px;
-  margin: 5px;
-  border-radius: 2px;
-  font-size: 17px;
 }
 
 .rules {

@@ -2190,7 +2190,7 @@ input[type="file"] {
 }
 
 .dash_profile_block {
-  background-color: #d3d3d3;
+  background-color: #fff;
   margin: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -2245,23 +2245,37 @@ input[type="file"] {
   margin-left: 117px;
 }
 
+.dashText {
+  text-align: justify;
+  font-size: 15px;
+  color: #000;
+  padding: 7px;
+}
+
 .dashboard_div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
+.dashborad_div_item h6 {
+  padding: 5px;
+}
+
+.dashborad_div_item b {
+  background-color: darkblue;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
 .dashborad_div_item {
   width: 320px;
   height: 200px;
-  background-color: #d3d3d3;
+  background-color: #fff;
   margin: 10px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   border-radius: 4px;
+  box-shadow: 0 0 2px rgb(0, 0, 0.1);
 }
 
 .station_police_div {
@@ -2601,6 +2615,14 @@ label {
   font-weight: 600;
 }
 
+.create_button button {
+  border: none;
+  background-color: darkblue;
+  padding: 10px 12px 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+
 /**Police Station header CSS start from here**/
 .thana_header {
   display: flex;
@@ -2614,10 +2636,28 @@ label {
   border-radius: 4px;
 }
 
+.update_form {
+  position: absolute;
+  background-color: cornsilk;
+  z-index: 1;
+  width: 20%;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.update_form input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
 .message_box {
   width: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 2px rgb(0, 0, 0.1);
+  background-color: cornsilk;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .message_box a {
@@ -2633,4 +2673,63 @@ label {
   color: grey;
   font-size: 14px;
 }
+
+.button_box button {
+  border: none;
+  padding: 7px 6px 10px;
+  background-color: darkblue;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.button_box button span {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  color: #000;
+  font-weight: 600;
+}
+
 /**Police Station header CSS start from here**/
+
+/**Admin page CSS code start from here**/
+.all_admin {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin_name {
+  width: 100%;
+  box-shadow: 0 0 2px rgb(0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.admintable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admintable td,
+.admintable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.admintable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.admintable tr:hover {
+  background-color: #ddd;
+}
+
+.admintable th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+/**Admin page CSS code end from here**/

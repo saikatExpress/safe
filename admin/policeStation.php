@@ -112,16 +112,62 @@ if (!empty($_GET['policeId'])) {
                     </div>
 
                     <div class="button_box">
-                        <button>Notice <span>8</span></button>
+
+                        <?php
+
+                        $db = new DataBase();
+
+                        $query2 = "SELECT * FROM thana_admin WHERE police_station_id = '$policeId'";
+
+                        $data2 = $db->select($query2);
+
+                        foreach ($data2 ?: [] as $value2) {
+                        }
+
+                        ?>
+
+                        <button type="button" id="updateBttn">Update</button>
+                        <div style="display: none;" id="updateForm" class="update_form">
+                            <form style="width: 100%;" action="" method="post">
+                                <input style="display: none;" type="text" name="polId" id="polId"
+                                    value="<?= $value2['police_station_id'] ?>">
+                                <label for="updateKey">Update Key : </label> <br>
+                                <input type="text" name="upKey" id="upKey" value="<?= $value2['police_station_key'] ?>">
+                                <br>
+                                <label for="updatePass">Update Password : </label> <br>
+                                <input type="text" name="upPass" id="upPass"
+                                    value="<?= $value2['police_station_password'] ?>"> <br>
+                                <button type="button" id="updateFormBtn">Update</button>
+                            </form>
+                        </div>
                     </div>
 
                     <a href="dashboard.php">Dashboard</a>
                 </div>
 
 
+
                 <div id="message_pan" class="message_pan">
 
+                    <script>
+                    var updateFormBtn = document.getElementById('updateFormBtn');
+                    updateFormBtn.addEventListener('click', function() {
+                        var polId = document.getElementById('polId').value;
+                        var upKey = document.getElementById('upKey').value;
+                        var upPass = document.getElementById('upPass').value;
 
+                        var dataString = "polId1=" + polId + "&upKey1=" + upKey + "&upPass1=" + upPass;
+
+                        $.ajax({
+                            type: 'POST',
+                            data: dataString,
+                            url: 'ajax/adminKeyupdate.php',
+                            success: function(html) {
+                                alert(html);
+                            }
+                        })
+                    })
+                    </script>
 
                 </div>
 
@@ -138,7 +184,7 @@ if (!empty($_GET['policeId'])) {
 
                         $query = "SELECT * FROM action_complain
                         LEFT JOIN complain_feedback ON action_complain.complainId = complain_feedback.com_id
-                         WHERE police_station_id = '$policeId'";
+                         WHERE action_complain.police_station_id = '$policeId' ORDER BY action_complain.police_station_id DESC";
 
                         $data = $db->select($query);
 
@@ -249,6 +295,18 @@ if (!empty($_GET['policeId'])) {
             </div>
         </div>
     </div>
+
+    <script>
+    var updateBttn = document.getElementById("updateBttn");
+    updateBttn.addEventListener('click', function() {
+        var updateForm = document.getElementById("updateForm");
+        if (updateForm.style.display === 'none') {
+            updateForm.style.display = 'block';
+        } else {
+            updateForm.style.display = 'none';
+        }
+    })
+    </script>
 
     <script>
     var msg = document.getElementById("msg");

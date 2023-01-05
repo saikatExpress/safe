@@ -104,24 +104,159 @@ Session::checkSession();
                                 Admin
                             </h4>
                         </a>
+
+                        <h6 class="dashText">
+                            This feature only for Admin Panel.Don't try to log in to the panel...Thank you
+                        </h6>
+                        <span>For any Query ...? = </span> <b>01713-617913</b>
                     </div>
 
                     <div class="dashborad_div_item">
+
+
+                        <?php
+
+                        $db = new DataBase();
+
+                        $query1 = "SELECT COUNT(p_id) AS pid FROM police_station WHERE admin_category = 'police'";
+                        $data1 = $db->select($query1);
+                        foreach ($data1 ?: [] as $value1) {
+                        }
+
+                        $query2 = "SELECT COUNT(c_id) AS cid FROM complains WHERE category = 'police'";
+                        $data2 = $db->select($query2);
+                        foreach ($data2 ?: [] as $value2) {
+                        }
+
+                        $query3 = "SELECT COUNT(complain_rep_id) AS rid FROM complain_feedback  WHERE complain_categories = 'police' and complain_status = 'success'";
+                        $data3 = $db->select($query3);
+                        foreach ($data3 ?: [] as $value3) {
+                        }
+
+                        $query4 = "SELECT COUNT(complain_rep_id) AS fid FROM complain_feedback  WHERE complain_categories = 'police' and complain_status = 'fail'";
+                        $data4 = $db->select($query4);
+                        foreach ($data4 ?: [] as $value4) {
+                        }
+
+                        ?>
+
                         <a href="police.php">
                             <h4>Police</h4>
                         </a>
+                        <h6>
+                            <span>Total Station : </span> <b><?= $value1['pid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Total Complain : </span> <b><?= $value2['cid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Success Complain : </span> <b><?= $value3['rid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Failed Complain's : </span> <b><?= $value4['fid'] ?></b>
+                        </h6>
                     </div>
 
                     <div class="dashborad_div_item">
+
+                        <?php
+
+                        $db = new DataBase();
+
+                        $query1 = "SELECT COUNT(p_id) AS pid FROM police_station WHERE admin_category = 'fireservice'";
+                        $data1 = $db->select($query1);
+                        foreach ($data1 ?: [] as $value1) {
+                        }
+
+                        $query2 = "SELECT COUNT(c_id) AS cid FROM complains WHERE category = 'fireservice'";
+                        $data2 = $db->select($query2);
+                        foreach ($data2 ?: [] as $value2) {
+                        }
+
+                        $query3 = "SELECT COUNT(complain_rep_id) AS rid FROM complain_feedback  WHERE complain_categories = 'fireservice' and complain_status = 'success'";
+                        $data3 = $db->select($query3);
+                        foreach ($data3 ?: [] as $value3) {
+                        }
+
+                        $query4 = "SELECT COUNT(complain_rep_id) AS fid FROM complain_feedback  WHERE complain_categories = 'fireservice' and complain_status = 'fail'";
+                        $data4 = $db->select($query4);
+                        foreach ($data4 ?: [] as $value4) {
+                        }
+
+                        ?>
+
                         <a href="fireservice.php">
                             <h4>Fire Service</h4>
                         </a>
+
+                        <h6>
+                            <span>Total Station : </span> <b><?= $value1['pid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Total Complain : </span> <b><?= $value2['cid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Success Complain : </span> <b><?= $value3['rid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Failed Complain's : </span> <b><?= $value4['fid'] ?></b>
+                        </h6>
                     </div>
 
                     <div class="dashborad_div_item">
+
+
+                        <?php
+
+                        $db = new DataBase();
+
+                        $query1 = "SELECT COUNT(p_id) AS pid FROM police_station WHERE admin_category = 'ambulance'";
+                        $data1 = $db->select($query1);
+                        foreach ($data1 ?: [] as $value1) {
+                        }
+
+                        $query2 = "SELECT COUNT(c_id) AS cid FROM complains WHERE category = 'ambulance'";
+                        $data2 = $db->select($query2);
+                        foreach ($data2 ?: [] as $value2) {
+                        }
+
+                        $query3 = "SELECT COUNT(complain_rep_id) AS rid FROM complain_feedback  WHERE complain_categories = 'ambulance' and complain_status = 'success'";
+                        $data3 = $db->select($query3);
+                        foreach ($data3 ?: [] as $value3) {
+                        }
+
+                        $query4 = "SELECT COUNT(complain_rep_id) AS fid FROM complain_feedback  WHERE complain_categories = 'ambulance' and complain_status = 'fail'";
+                        $data4 = $db->select($query4);
+                        foreach ($data4 ?: [] as $value4) {
+                        }
+
+                        ?>
+
                         <a href="ambulance.php">
                             <h4>Ambulance</h4>
                         </a>
+
+                        <h6>
+                            <span>Total Station : </span> <b><?= $value1['pid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Total Complain : </span> <b><?= $value2['cid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Success Complain : </span> <b><?= $value3['rid'] ?></b>
+                        </h6>
+
+                        <h6>
+                            <span>Failed Complain's : </span> <b><?= $value4['fid'] ?></b>
+                        </h6>
                     </div>
 
                     <div class="dashborad_div_item">

@@ -45,17 +45,16 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Help Line</title>
     <link rel="shortcut icon" type="image/png" href="images/help-line.png" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
-        body {
-            background-image: url("logos/999-design-group-ltd-logo-vector.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 1367px 625px;
+    body {
 
-        }
+        background-color: #fff;
+
+    }
     </style>
 </head>
 
@@ -106,7 +105,8 @@ if (isset($_POST['submit'])) {
 
                     <div class="form">
                         <label for="conpass"></label>
-                        <input type="password" id="conpass" name="conpass" placeholder="Confirm Password" autocomplete="off">
+                        <input type="password" id="conpass" name="conpass" placeholder="Confirm Password"
+                            autocomplete="off">
                         <span id="conpassErr"></span>
                     </div>
 
@@ -120,35 +120,6 @@ if (isset($_POST['submit'])) {
                         <a href="login.php">Already hava an account...?</a>
                     </div>
                 </form>
-            </div>
-
-
-
-
-            <div class="alert_box">
-                <div class="registration_rules">
-                    <h4>Registration Rules : </h4>
-                    <div class="rules">
-                        <ol type="i">
-                            <li id="id_name">Name must be contain letters</li>
-                            <li>Mobile number must be start with 0 and number</li>
-                            <li>Valid email format</li>
-                            <li>Password must contain number,captial letter,special character</li>
-                        </ol>
-                    </div>
-
-                </div>
-
-                <div class="registration_alert">
-                    <p>
-                        আমাদের এই সেবাটি পেতে,উপরে দেওয়া সব নিয়ম মেনে রেজিস্ট্রেশন সম্পন্ন করুন। অনুগ্রহপূর্বক আপনার চালুকৃত মোবাইল নাম্বার দিয়ে রেজিস্ট্রেশন করুন।
-                    </p>
-                </div>
-
-                <div style="width:400px ;" class="social_box">
-                    <h2>বিস্তারিত জানতে নিচের লিংকে প্রবেশ করুন</h2>
-                </div>
-
             </div>
         </div>
     </div>
