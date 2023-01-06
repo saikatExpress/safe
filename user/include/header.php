@@ -83,7 +83,22 @@ Session::checkSession();
                             <li><a href="logout.php">Log out</a></li>
                         </ul>
                         <div class="user_details">
-                            <h6><?php echo Session::get("firtsname") . " " . Session::get("lastname"); ?></h6>
+
+                            <?php
+                            $db = new DataBase();
+                            $id = $_SESSION['id'];
+                            $query2 = "SELECT firstname,lastname FROM user_reg WHERE id = '$id'";
+                            $data2 = $db->select($query2);
+                            if ($data2) {
+                                foreach ($data2 ?: [] as $value2) {
+                                }
+                            } else {
+                                echo "false";
+                            }
+
+                            ?>
+
+                            <h6><?= $value2['firstname'] . " " . $value2['lastname'] ?></h6>
                             <?php
 
                             $db = new DataBase();
@@ -119,22 +134,95 @@ Session::checkSession();
                 <a class="menubar_anchor" href="hospital.php">Hospital</a>
                 <a class="menubar_anchor" href="blog.php">Blog</a>
                 <button type="button" id="userBtn">
+
+                    <?php
+
+                    if (empty($value['images'])) { ?>
+                    <img src="images/demo.png" alt="no images">
+                    <?php } else { ?>
                     <img src="upload/<?php echo $value['images']; ?>" alt="no images">
+                    <?php }
+
+                    ?>
+
+
                 </button>
+
+
+
 
                 <div class="user_drop_menu" style="display: none;" id="myClass">
 
                     <div class="user_drop_profile">
+
+                        <?php
+
+                        if (empty($value['images'])) { ?>
+                        <img src="images/demo.png" alt="no images">
+                        <?php  } else { ?>
                         <img src="upload/<?php echo $value['images']; ?>" alt="no images">
-                        <h4><?= Session::get("firtsname") . " " . Session::get("lastname") ?></h4>
+                        <?php }
+
+                        ?>
+
+                        <?php
+
+                        $db = new DataBase();
+                        $id = $_SESSION['id'];
+                        $query2 = "SELECT firstname,lastname FROM user_reg WHERE id = '$id'";
+                        $data2 = $db->select($query2);
+                        if ($data2) {
+                            foreach ($data2 ?: [] as $value2) {
+                            }
+                        } else {
+                            echo "False";
+                        }
+
+                        ?>
+                        <h4><?= $value2['firstname'] . " " . $value2['lastname'] ?></h4>
                     </div>
 
                     <hr>
 
                     <div class="user_drop_anchor">
                         <a href="logout.php">Log out</a>
-                        <a href="">Edit your profile</a>
-                        <a href="">Update Password</a>
+                        <a href="editprofile.php">Edit your profile</a>
+                        <button type="button" id="upUserBtn">Update Password & name</button>
+                        <div style="display: none;" id="upUserProfile" class="upUserProfile">
+                            <?php
+                            $db = new DataBase();
+                            $id = $_SESSION['id'];
+
+                            $query1 = "SELECT * FROM user_reg WHERE id = '$id'";
+                            $data1 = $db->select($query1);
+
+                            if ($data1) {
+                                foreach ($data1 ?: [] as $value1) {
+                                }
+                            } else {
+                                echo "This is empty";
+                            }
+
+                            ?>
+                            <form action="" method="post">
+
+                                <label for="firstname">Edit first name : </label> <br>
+                                <input type="text" name="firstname" id="firstname" value="<?= $value1['firstname'] ?>">
+                                <br>
+
+                                <label for="lastname">Edit last name : </label> <br>
+                                <input type="text" name="lastname" id="lastname" value="<?= $value1['lastname'] ?>">
+                                <br>
+
+                                <label for="userpass">Update your password : </label> <br>
+                                <input type="text" name="userpass" id="userpass" value="<?= $value1['password'] ?>">
+                                <br>
+                                <input style="display: none;" type="text" name="userId" id="userId"
+                                    value="<?= $value1['id'] ?>">
+
+                                <button type="button" id="userButton">Update</button>
+                            </form>
+                        </div>
                     </div>
 
                 </div>
@@ -144,6 +232,41 @@ Session::checkSession();
 
         </div>
     </div>
+
+
+    <script>
+    var userButton = document.getElementById("userButton");
+    userButton.addEventListener('click', function() {
+        var firstname = document.getElementById("firstname").value;
+        var userpass = document.getElementById("userpass").value;
+        var lastname = document.getElementById("lastname").value;
+        var userId = document.getElementById("userId").value;
+
+        var dataString = "firstname1=" + firstname + "&lastname1=" + lastname + "&userpass1=" + userpass +
+            "&userId1=" + userId;
+
+        $.ajax({
+            type: "POST",
+            data: dataString,
+            url: "ajax/namePassupdate.php",
+            success: function(html) {
+                alert(html);
+            }
+        })
+    })
+    </script>
+
+    <script>
+    var upUserBtn = document.getElementById("upUserBtn");
+    upUserBtn.addEventListener('click', function() {
+        var upUserProfile = document.getElementById("upUserProfile");
+        if (upUserProfile.style.display === 'none') {
+            upUserProfile.style.display = 'block';
+        } else {
+            upUserProfile.style.display = 'none';
+        }
+    })
+    </script>
 
     <script>
     var userBtn = document.getElementById("userBtn");

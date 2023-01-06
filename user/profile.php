@@ -265,9 +265,19 @@ if (isset($_POST['coverPhoto'])) {
             </div>
 
             <div class="complain-card">
+
+                <?php
+
+                $query1 = "SELECT COUNT(c_id) AS CID FROM complains WHERE u_id ='$id'";
+                $data1 = $db->select($query1);
+                foreach ($data1 ?: [] as $value1) {
+                }
+
+                ?>
+
                 <div class="complain">
                     <h4>Complain's</h4>
-                    <h6>20</h6>
+                    <h6><?= $value1['CID'] ?></h6>
                 </div>
 
                 <div class="complain">
@@ -340,6 +350,67 @@ if (isset($_POST['coverPhoto'])) {
                         </table>
                     </form>
                 </div>
+
+
+                <div class="div_complains">
+                    <h2>Complain's List</h2>
+                    <div class="div_complain_list">
+                        <table class="myTable">
+                            <tr>
+                                <th>SL</th>
+                                <th>Name</th>
+                                <th>Complain's</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                            <?php
+
+                            $db = new DataBase();
+                            $sl = 0;
+                            $query3 = "SELECT * FROM complains
+                             LEFT JOIN user_reg ON complains.u_id = user_reg.id
+                             LEFT JOIN complain_feedback ON complains.c_id = complain_feedback.com_id
+                             WHERE complains.u_id = '$id'";
+                            $data3 = $db->select($query3);
+                            if ($data3) {
+                                foreach ($data3 ?: [] as $value3) { ?>
+                            <?php
+                                    $sl++;
+                                    $comId = $value3['com_id'];
+                                    ?>
+                            <tr>
+                                <td><?= $sl ?></td>
+                                <td><?= $value3['firstname'] . " " . $value3['lastname'] ?></td>
+                                <td><?= $value3['problems'] ?></td>
+                                <td><?= $value3['category'] ?></td>
+                                <td><?php
+
+                                            if ($comId) {
+                                                echo $value3['complain_status'];
+                                            } else {
+                                                echo "Pending";
+                                            }
+
+                                            ?></td>
+                                <td>
+                                    <a href="">Delete</a> / <a href="">View</a>
+                                </td>
+                            </tr>
+                            <?php }
+                            } else {
+                                echo "You have no complain's yet";
+                            }
+
+                            ?>
+
+
+                        </table>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>

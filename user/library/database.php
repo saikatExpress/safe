@@ -69,7 +69,7 @@ class DataBase
     public function update($query)
     {
         $data = $this->link->query($query) or die($this->link->error . __LINE__);
-        if ($data->num_rows > 0) {
+        if ($data) {
             return $data;
         } else {
             die("Error : (" . $this->link->errno . ")" . $this->link->error);

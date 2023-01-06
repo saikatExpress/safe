@@ -301,59 +301,67 @@
                             <div class="call_info">
                                 <h6 class="requstTitle">Your Request List</h6>
 
+                                <?php
+
+                                $db = new DataBase();
+
+                                $id = $_SESSION['id'];
+                                $query3 = "SELECT * FROM complains
+                                LEFT JOIN user_reg ON complains.u_id = user_reg.id
+                                LEFT JOIN complain_feedback ON complains.c_id = complain_feedback.com_id
+                                 WHERE complains.u_id = '$id' and complains.category = 'ambulance' ORDER BY complains.c_id DESC";
+                                $data3 = $db->select($query3);
+                                if ($data3) {
+                                    foreach ($data3 ?: [] as $value3) { ?>
+
+                                <?php
+
+                                        $date = date_create($value3['complain_time']);
+                                        $dateFormat = date_format($date, 'd M');
+                                        $timeFormat = date_format($date, 'h:ia');
+                                        ?>
+
+                                <?php
+
+                                        $status = $value3['complain_status'];
+
+                                        ?>
                                 <div class="call_info_style">
                                     <div class="call_info_date">
-                                        <p>22 Nov</p>
+                                        <p><?= $dateFormat ?></p>
                                     </div>
 
                                     <div class="call_info_details">
-                                        <h4>Saikat Talukder</h4>
+                                        <h4><?= $value3['firstname'] . " " . $value3['lastname'] ?></h4>
                                     </div>
 
                                     <div class="call_info_details">
-                                        <p>10.48 pm</p>
+                                        <p><?= $timeFormat ?></p>
                                     </div>
 
                                     <div class="call_info_details">
-                                        <mark>Pending</mark>
+                                        <mark>
+                                            <?php
+                                                    if ($status) {
+                                                        echo $status;
+                                                    } else {
+                                                        echo "Pending";
+                                                    }
+                                                    ?>
+                                        </mark>
                                     </div>
                                 </div>
+                                <?php  }
+                                } else {
+                                    echo "You have no calling ambulance..! Thank you";
+                                }
 
-                                <div class="call_info_style">
-                                    <div class="call_info_date">
-                                        <p>22 Nov</p>
-                                    </div>
 
-                                    <div class="call_info_details">
-                                        <h4>Saikat Talukder</h4>
-                                    </div>
+                                ?>
 
-                                    <div class="call_info_details">
-                                        <p>10.48 pm</p>
-                                    </div>
 
-                                    <div class="call_info_details">
-                                        <mark>Pending</mark>
-                                    </div>
-                                </div>
 
-                                <div class="call_info_style">
-                                    <div class="call_info_date">
-                                        <p>22 Mar</p>
-                                    </div>
 
-                                    <div class="call_info_details">
-                                        <h4>Saikat Talukder</h4>
-                                    </div>
-
-                                    <div class="call_info_details">
-                                        <p>10.48 pm</p>
-                                    </div>
-
-                                    <div class="call_info_details">
-                                        <mark>Pending</mark>
-                                    </div>
-                                </div>
 
                             </div>
 
