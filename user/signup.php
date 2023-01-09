@@ -55,6 +55,22 @@ if (isset($_POST['submit'])) {
         background-color: #fff;
 
     }
+
+    .stylish_form input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        margin: 10px;
+        background: transparent;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        color: white;
+        outline-width: medium;
+        font-weight: bold;
+        outline: none;
+        width: 95%;
+    }
     </style>
 </head>
 
@@ -125,7 +141,7 @@ if (isset($_POST['submit'])) {
     </div>
 
 
-    </div>
+
 
 
 
