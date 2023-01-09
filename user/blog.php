@@ -105,7 +105,7 @@
 
                     ?>
 
-                    <div style="display: none;" id="blogContent" class="blog_content_form">
+                    <div class="blog_content_form">
                         <form autocomplete="off" action="" method="post" enctype="multipart/form-data">
 
                             <div class="blog_blk">
@@ -182,19 +182,8 @@
 
             </div>
 
-            <div>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur numquam provident
-                    debitis, alias quo rerum voluptatibus deserunt et error non incidunt ut nemo earum
-                    accusantium quia praesentium illo doloremque blanditiis sint dolores amet velit dicta. Odit
-                    perspiciatis consequuntur soluta, consequatur quam voluptates voluptatem tempora deserunt
-                    voluptatibus obcaecati iure quis libero quaerat suscipit ad reiciendis incidunt, numquam,
-                    vitae modi eligendi eum sequi exercitationem facilis. Laborum, rem omnis non, libero
-                    repellendus porro corrupti impedit amet obcaecati iusto, labore enim nisi! Consectetur nemo
-                    facere, doloremque dolorem error architecto, in eos unde, id cumque quod quaerat nobis
-                    sapiente repudiandae similique odit ipsam molestias odio?
-                </p>
-            </div>
+
+
 
         </div>
 

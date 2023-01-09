@@ -199,15 +199,6 @@
                     </div>
                 </div>
 
-                <div class="special_service">
-                    <div class="speacial_services_area">
-                        <h2>Special Service</h2>
-
-
-                    </div>
-                </div>
-
-
             </div>
 
             <div class="col-lg-8">

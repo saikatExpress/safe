@@ -6,24 +6,32 @@
         <div class="col-lg-12">
             <div class="about_us">
                 <div class="about_image">
-                    <img src="images/13251850-cork-board-with-colorful-graphic-flower-and-grass.webp" alt="no images">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGRJnEfgNHcyrE_yH4VM9Si3vddDFT1HNI6A&usqp=CAU"
+                        alt="no images">
                 </div>
                 <div class="about_shorts">
-                    <h4>About US</h4>
+                    <h4>Emergency Help Line</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti fugiat id doloribus
-                        fugit,
-                        incidunt perferendis possimus, quaerat inventore officiis exercitationem nihil alias porro
-                        explicabo
-                        quia pariatur ut velit dolor!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, pariatur dolores. Impedit
-                        distinctio, quia placeat laudantium ducimus at debitis fuga aut rem. Obcaecati deleniti
-                        architecto, ad aperiam assumenda in fuga.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quos veniam minima nisi tempore
-                        asperiores debitis molestiae nam aperiam! Natus dignissimos porro, suscipit dolorum veniam at
-                        modi tempora ipsum voluptates!
+                        <b>Emergency services and rescue services</b> are organizations that ensure public safety and
+                        health
+                        by addressing and resolving different emergencies. Some of these agencies exist solely for
+                        addressing certain types of emergencies, while others deal with ad hoc emergencies as part of
+                        their normal responsibilities. Many of these agencies engage in community awareness and
+                        prevention programs to help the public avoid, detect, and report emergencies effectively.
+                        Emergency services are often considered first responders.
+
+                        Emergency services have one or more dedicated emergency telephone numbers reserved for critical
+                        emergency calls. In many countries, one number is used for all of the emergency services (e.g.
+                        911 in the Americas, 999 in the United Kingdom, 112 in continental Europe, 000 in Australia). In
+                        some countries, each emergency service has its own emergency number (e.g. 110 for police, 118
+                        for coast guard, 119 for fire and medical in Japan; 110 for police, 119 for fire, 120 for
+                        medical in China). Calls made to emergency services to report emergencies are called calls for
+                        service.
+
+                        The availability of emergency services depends very heavily on location, and may in some cases
+                        also rely on the recipient giving payment or holding suitable insurance or other surety for
+                        receiving the service.
                     </p>
-                    <a href="#">See more</a>
                 </div>
             </div>
 

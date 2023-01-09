@@ -76,13 +76,25 @@ body {
 }
 
 .stylish_form {
-  width: 24%;
+  width: 25%;
   padding: 10px;
-  background: #574f4f;
+  background: #0000ffa3;
   color: white !important;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0.1);
   border-radius: 4px;
+}
+
+.user_drop_profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .stylish_form {
+    width: 100%;
+  }
 }
 
 .stylish_form h4 {
@@ -412,6 +424,54 @@ input[type="password"] {
   color: darkgoldenrod;
 }
 
+.responsive_img {
+  width: 100px;
+  padding: 5px;
+}
+
+.user_drop_profile h4 {
+  font-size: 18px;
+  padding: 5px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Bebas Neue", cursive;
+}
+
+.user_drop_anchor a {
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.user_drop_anchor a:hover {
+  color: blue;
+}
+
+.user_drop_anchor button {
+  padding: 10px;
+  font-size: 14px;
+  background-color: darkblue;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.upUserProfile {
+  padding: 5px;
+}
+
+.upUserProfile input {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.upUserProfile label {
+  padding: 5px;
+  font-size: 16px;
+}
+
 /**Main body css*/
 .notice_board {
   padding: 10px 20px;
@@ -550,18 +610,6 @@ input[type="password"] {
   padding: 0%;
 }
 
-.user_drop_anchor a {
-  padding: 10px;
-  font-size: 20px;
-  color: #000;
-  text-decoration: none;
-  transition: all 0.4s;
-}
-
-.user_drop_anchor a:hover {
-  color: blue;
-}
-
 .news ul {
   float: left;
   padding-left: 20px;
@@ -627,14 +675,6 @@ input[type="password"] {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-}
-
-.user_drop_profile h4 {
-  font-size: 18px;
-  padding: 5px;
-  font-weight: 600;
-  color: #000;
-  font-family: "Bebas Neue", cursive;
 }
 
 .user_drop_anchor {
@@ -1130,16 +1170,6 @@ input[type="password"] {
   width: 95%;
 }
 
-.upUserProfile {
-  padding: 5px;
-}
-
-.upUserProfile input {
-  padding: 5px;
-  width: 100%;
-  margin-bottom: 5px;
-}
-
 .myTable {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -1167,19 +1197,6 @@ input[type="password"] {
   text-align: left;
   background-color: #04aa6d;
   color: white;
-}
-
-.upUserProfile label {
-  padding: 5px;
-  font-size: 16px;
-}
-
-.user_drop_anchor button {
-  padding: 10px;
-  font-size: 14px;
-  background-color: darkblue;
-  color: #fff;
-  border-radius: 4px;
 }
 
 .profile_edit button {
@@ -1719,6 +1736,22 @@ input[type="password"] {
   border: 1px solid #777;
 }
 
+.about_shorts h4 {
+  font-size: 35px;
+  color: teal;
+  text-decoration: underline;
+  padding: 5px;
+  font-family: "Noto Sans Bengali", sans-serif;
+}
+
+.about_shorts p {
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 0;
+  color: #000;
+  font-family: "Amita", cursive;
+}
+
 .gallery img {
   width: 100%;
   height: 150px;
@@ -1755,20 +1788,19 @@ input[type="password"] {
 /**About page CSS code start from here**/
 .about_us {
   display: flex;
-  background: #fff;
+  background-color: #fff;
   margin-top: 10px;
-  box-shadow: 0 0 10px black;
   border-radius: 4px;
   height: auto;
 }
 
-.about_image {
-  padding: 5px 10px;
-}
-
 .about_image img {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 410px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding: 2px;
 }
 
 .about_shorts {
@@ -1858,7 +1890,7 @@ input[type="password"] {
 
 /**Hospital Page CSS code start from here**/
 .hospital_list {
-  background: aliceblue;
+  background: #fff;
   box-shadow: 0 0 1px black;
   border-radius: 4px;
 }
@@ -1868,8 +1900,7 @@ input[type="password"] {
   font-weight: bold;
   text-align: center;
   padding: 5px;
-  color: #fff;
-  background-image: linear-gradient(to right, #844040, blue);
+  color: #000;
 }
 
 .hospital_list h6 {
@@ -1895,14 +1926,14 @@ input[type="password"] {
 
 .hospital_list p {
   padding: 5px;
-  color: #003cf0;
+  color: #000;
   margin-bottom: 0%;
   font-weight: 700;
 }
 
 .hospital_list span {
   padding: 5px;
-  color: darkgreen;
+  color: #000;
 }
 
 .side_bar_menu {
@@ -1915,13 +1946,12 @@ input[type="password"] {
 }
 
 .side_bar_menu h4 {
-  font-size: 25px;
+  font-size: 16px;
   padding: 5px 8px;
-  background: khaki;
   text-align: justify;
   border-radius: 4px;
   color: darkblue;
-  background-image: linear-gradient(to right, #cccc9a, #c84c4c);
+  font-weight: 600;
 }
 
 .hospital_blog {
@@ -3628,16 +3658,6 @@ input[type="password"] {
   font-family: "Abril Fatface", cursive;
 }
 
-.special_service {
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 2px 2px 10px gray;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-}
-
 .call_ambulance_form {
   display: flex;
   justify-content: space-between;
@@ -4434,14 +4454,14 @@ i {
 }
 
 .text {
-  color: #f2f2f2;
+  color: #000;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   top: 75%;
   width: 100%;
   text-align: justify;
-  background-color: #006280;
+  background-color: #fff;
 }
 
 .dot {
@@ -4500,30 +4520,30 @@ i {
 
 .text a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 .text a h2 {
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Rubik Distressed", cursive;
+  color: #000;
 }
 .text a h4 {
-  font-size: 20px;
-  color: rgb(0, 217, 255);
+  font-size: 16px;
+  color: #000;
   font-weight: 600;
   font-family: "Rubik", sans-serif;
 }
 
 .text a h6 {
-  font-size: 23px;
+  font-size: 19px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: floralwhite;
+  color: #000;
   text-decoration: underline;
 }
 
 .text i {
-  background-image: linear-gradient(to right, red, yellow);
-  font-size: 19px;
+  font-size: 15px;
   color: #000;
   width: 30px;
   height: 30px;
@@ -4532,7 +4552,7 @@ i {
 }
 
 .text span {
-  color: violet;
+  color: #000;
 }
 
 /**Slide Image CSS code end from here**/
@@ -4694,3 +4714,548 @@ i {
 }
 
 /**Hospital List CSS end from here**/
+
+/**Responsive media query start from here**/
+
+@media only screen and (max-width: 500px) {
+  .responsive_img {
+    width: 13%;
+    padding: 5px;
+  }
+
+  .project_logo {
+    width: 85%;
+    float: right;
+    margin-top: -20px;
+  }
+
+  .user_profile ul li {
+    padding: 0%;
+  }
+
+  .menubar_anchor {
+    text-decoration: none;
+    color: indigo;
+    padding: 5px;
+    font-family: "Noto Sans Bengali", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.4s;
+  }
+
+  .userBtn {
+    margin-left: 80%;
+  }
+
+  .user_drop_menu {
+    position: absolute;
+    background-color: cornsilk;
+    box-shadow: 0 0 3px rgb(0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px 12px 10px;
+    width: 65%;
+    left: 22%;
+    margin-top: 10px;
+    z-index: 1;
+  }
+
+  .user_drop_profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .user_drop_profile h4 {
+    font-size: 12px;
+    padding: 5px;
+    font-weight: 600;
+    color: #000;
+    font-family: "Bebas Neue", cursive;
+  }
+
+  .user_drop_anchor a {
+    padding: 0;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+
+  .user_drop_anchor button {
+    padding: 2px;
+    font-size: 10px;
+    background-color: darkblue;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .upUserProfile {
+    padding: 0;
+  }
+
+  .upUserProfile input {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  .upUserProfile label {
+    font-size: 10px;
+    padding: 0;
+  }
+
+  .hotline {
+    background: darkblue;
+    border-top-right-radius: 80%;
+    width: 50%;
+    padding: 5px 10px;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0 -30px 30px rgba(255, 7, 7, 0.4);
+    text-shadow: 2px 3px blue;
+    margin-top: 30px;
+  }
+
+  .hotline-number {
+    width: 43%;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    height: 180px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 3px;
+  }
+
+  .hotline-number h6 {
+    background: black;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+    box-shadow: inset 0 -30px 30px rgba(16, 168, 242, 0.4);
+  }
+
+  .row.police {
+    background: #fff;
+    padding: 0;
+    margin-top: 10px;
+    height: auto;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+
+  .police_complain {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    background: #d3d3d3;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  .user_page_title img {
+    width: 90px;
+    height: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    border-radius: 50%;
+    padding: 2px;
+    margin-top: 15px;
+  }
+
+  .user_page_title figcaption {
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  .user_title_image h4 {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    color: #3500f4;
+  }
+
+  .complain_form input[type="text"] {
+    padding: 10px 25px;
+    margin: 10px;
+    width: 220px;
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    outline: none;
+  }
+
+  .complain_form input[type="submit"] {
+    padding: 6px 10px;
+    border: none;
+    margin-left: 115px;
+    width: 110px;
+    font-size: 19px;
+    font-family: sens-serif;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .ambu_title {
+    text-align: center;
+    padding: 5px;
+    font-family: "Itim", cursive;
+    font-size: 35px;
+  }
+
+  .call_ambulance_form {
+    display: block;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ambulance_form_style {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .form_view_style {
+    width: 90%;
+  }
+
+  .call_info {
+    background-color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
+  .call_info_details mark {
+    background: blue;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0.7);
+    cursor: pointer;
+  }
+
+  .ambulance_area h1 {
+    color: #1fe0ba;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .ambulance_area p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+    font-family: "Arimo", sans-serif;
+    text-align: justify;
+  }
+
+  .all_hours_block {
+    padding: 5px 10px;
+    margin-top: 10px;
+    background: #032b35;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px black;
+    height: auto;
+  }
+
+  .ambulance_area span {
+    color: #fc0;
+    margin-left: 32%;
+    font-family: "Anybody", cursive;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  .nearest_help_number {
+    margin-top: 10px;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px black;
+    height: auto;
+  }
+
+  .nearest_number_form {
+    padding: 4px 8px;
+    background: bisque;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+  }
+
+  .nearest_number_form label {
+    padding: 0;
+    font-weight: 600;
+    color: blue;
+  }
+
+  .nearest_number_form select {
+    padding: 7px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .nearest_number_form input[type="button"] {
+    width: 100px;
+    padding: 1px;
+    background: aqua;
+    background-color: aqua;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px gray;
+    border: 1px ridge aqua;
+    font-weight: 600;
+    color: #000;
+    transition: all 0.4s;
+    margin-top: 5px;
+  }
+
+  .full_res_area {
+    background: #fff;
+    border-radius: 4px;
+    padding: 0;
+    width: 40%;
+    float: left;
+    margin-left: 20px;
+    box-shadow: 0 0 2px rgb(0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+
+  .dist_name {
+    font-size: 18px;
+    border-bottom: 2px ridge gray;
+    border-bottom-color: gray;
+    border-bottom-color: gray;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 0;
+    font-weight: 600;
+    color: blue;
+    border-color: blue;
+  }
+
+  .full_res_desc {
+    border-radius: 4px;
+    margin: 3px;
+    background: lightyellow;
+    box-shadow: 0 0 2px rgb(0, 0, 0.1);
+    height: auto;
+  }
+
+  .full_res_desc h4 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: purple;
+    padding: 2px 4px;
+    text-align: center;
+  }
+
+  .full_res_desc h5 {
+    font-size: 8px;
+    padding: 3px 6px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .full_res_desc h5 i {
+    font-size: 10px;
+    font-weight: 700;
+    color: blue;
+  }
+
+  .doctor_emergency_service {
+    background-color: #fff;
+    margin: 10px;
+    width: 95%;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    height: auto;
+  }
+
+  .doctor_search_box button {
+    position: absolute;
+    margin-left: -35px;
+    width: 11%;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    background-color: aqua;
+  }
+
+  .item_images .doctor_category_item {
+    display: none;
+    position: absolute;
+    top: 40%;
+    background-color: #d3d3d3;
+    padding: 3px 5px 7px;
+    height: auto;
+    opacity: 0.9;
+    width: 100%;
+  }
+
+  .item_images {
+    width: 45%;
+    margin: 5px;
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .doctor_category_item h2 {
+    text-align: center;
+    font-size: 10px;
+    color: blue;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  .doctor_category_item p {
+    font-size: 10px;
+    color: rgb(0, 96, 240);
+    text-align: justify;
+    font-weight: 500;
+    font-family: "Indie Flower", cursive;
+    line-height: 13px;
+  }
+
+  .doctor_category_item h6 {
+    margin-bottom: 0;
+    font-size: 8px;
+    color: rgb(25, 0, 250);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .hospital_search td {
+    font-size: 12px;
+    font-family: sens-serif;
+    font-weight: 700;
+    color: blue;
+  }
+
+  .hospital_search select {
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    background: #fff;
+    border: none;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 7px;
+  }
+
+  .hospital_trend_list {
+    display: block;
+    justify-content: space-between;
+    background: #fff;
+    margin: 10px;
+    border-radius: 4px;
+  }
+
+  .hospital_image img {
+    width: 100%;
+    height: 153px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hospital_trend_details h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hospital_trend_details p {
+    margin-bottom: 0;
+  }
+
+  .blog_form_blk_style {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .create_blog_head h4::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 295px;
+    background-color: cyan;
+    right: 0;
+    top: 73%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .activities_details {
+    padding: 5px 10px;
+    margin: 5px;
+    margin-top: 5px;
+    margin-top: 5px;
+    box-shadow: 0 0 3px rgb(0, 0, 0);
+    width: 45%;
+    margin-top: 25px;
+    float: left;
+    height: auto;
+  }
+
+  .activities_details img {
+    width: 100%;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    box-shadow: 0 0 2px black;
+    height: 100px;
+  }
+
+  .comment_form input[type="button"] {
+    padding: 5px 7px;
+    margin-left: 64%;
+    margin-top: 5px;
+    width: 100px;
+    border: none;
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  .news_title h4 {
+    margin-bottom: 0;
+    font-family: "Noto Sans Bengali", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .news_paragraph p {
+    text-align: justify;
+    padding: 5px 8px 8px;
+    text-indent: 25px;
+    font-family: "Source Serif Pro", serif;
+    font-size: 14px;
+    line-height: 25px;
+    color: #000;
+  }
+}
+
+/**Responsive media query end from here**/

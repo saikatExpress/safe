@@ -62,7 +62,7 @@ Session::checkSession();
         <div class="container">
             <div style="background: white; margin-top:5px; border-radius:2px;" class="row">
                 <div class="col-lg-4">
-                    <img style="width: 100px; padding:5px;" src="images/inddfex.jpeg" alt="no images">
+                    <img class="responsive_img" src="images/inddfex.jpeg" alt="no images">
                     <div class="project_logo">
                         <h4>Controlled by : </h4>
                         <h5>Bangladesh Youth Foundation</h5>
@@ -133,7 +133,7 @@ Session::checkSession();
                 <a class="menubar_anchor" href="doctor.php">Doctor's</a>
                 <a class="menubar_anchor" href="hospital.php">Hospital</a>
                 <a class="menubar_anchor" href="blog.php">Blog</a>
-                <button type="button" id="userBtn">
+                <button type="button" class="userBtn" id="userBtn">
 
                     <?php
 
