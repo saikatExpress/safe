@@ -6,6 +6,10 @@ Session::checkSession();
 ?>
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,16 +62,45 @@ Session::checkSession();
 <body>
 
     <section>
+
+
         <div class="dash_content">
             <div class="dash_profile">
                 <div class="dash_profile_block">
+
+
+                    <?php
+
+                    $db = new DataBase();
+
+                    $id = $_SESSION['id'];
+
+                    $query = "SELECT * FROM admin_reg
+LEFT JOIN admin_profile ON admin_reg.id = admin_profile.u_id 
+WHERE admin_reg.id = '$id'";
+
+                    $data = $db->select($query);
+
+                    foreach ($data ?: [] as $value) {
+                        $date = date_create($value['joining_date']);
+                        $date_format = date_format($date, 'F d,Y');
+                    }
+
+
+                    ?>
+
                     <div class="dash_profile_img">
-                        <img src="images/user-demo.png" alt="no images">
+                        <img src="upload/<?= $value['admin_image'] ?>" alt="no images">
                     </div>
                     <div class="dash_profile_title">
-                        <h4>Saikat Talukder</h4>
+                        <div class="admin_profile_page">
+                            <h4><?= $value['firstname']  ?></h4>
+                            <a href="admin_profile.php?uid=<?= $_SESSION['id'] ?>">Edit <i class="fa fa-pencil-square"
+                                    aria-hidden="true"></i></a>
+                        </div>
                         <h3>
-                            <i style="color:blue;" class="fa fa-phone-square" aria-hidden="true"></i> 01751810216
+                            <i style="color:blue;" class="fa fa-phone-square" aria-hidden="true"></i>
+                            <?= $value['admin_contact'] ?>
                         </h3>
                         <h5>Employee</h5>
                         <a href="logout.php">Log Out</a>
@@ -76,20 +109,20 @@ Session::checkSession();
                     <div class="dash_board_info">
                         <h4>Employee Details : </h4>
                         <h6>
-                            <span>Designation : </span> Super Admin
+                            <span>Designation : </span> <?= $value['admin_designation'] ?>
                         </h6>
                         <h6>
-                            <span>Branch : </span> Netrakona Branch
+                            <span>Branch : </span> <?= $value['branch_area'] ?>
                         </h6>
 
                         <h6>
-                            <span>District : </span> Jamalpur
+                            <span>District : </span> <?= $value['admin_district'] ?>
                         </h6>
                         <h6>
-                            <span>Division : </span> Mymensingh
+                            <span>Division : </span> <?= $value['admin_division'] ?>
                         </h6>
                         <h6>
-                            <span>Joined on : </span> March 27,2022
+                            <span>Joined on : </span> <?= $date_format ?>
                         </h6>
                     </div>
                 </div>

@@ -78,7 +78,7 @@
         $query = "SELECT * FROM complains
             LEFT JOIN user_reg ON complains.u_id = user_reg.id
             LEFT JOIN complain_feedback ON complains.c_id = complain_feedback.com_id
-             WHERE complains.category = 'ambulance'";
+             WHERE complains.category = 'fireservice'";
 
         $data = $db->select($query);
 
@@ -128,7 +128,7 @@
         $query = "SELECT * FROM complains
             LEFT JOIN user_reg ON complains.u_id = user_reg.id
             LEFT JOIN complain_feedback ON complains.c_id = complain_feedback.com_id
-             WHERE complains.category = 'fireservice'";
+             WHERE complains.category = 'ambulance'";
 
         $data = $db->select($query);
 

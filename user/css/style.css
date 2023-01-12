@@ -1736,6 +1736,11 @@ body {
   height: auto;
 }
 
+.main_card {
+  margin: 0 auto;
+  width: 30%;
+}
+
 .about_image img {
   width: 300px;
   height: 410px;
@@ -1751,84 +1756,61 @@ body {
   width: 100%;
 }
 
-.team_news {
-  background: #fff;
-  margin-top: 10px;
-  box-shadow: 0 0 10px black;
-  border-radius: 4px;
+.full_team_panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.team_news h2 {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 2px solid black;
-}
-
-.team_details {
-  width: 250px;
-  margin: 50px;
+.card.imageCard {
+  margin: 10px;
   height: auto;
-  display: inline flow-root list-item;
-  list-style: none;
-  box-shadow: 0 0 10px black;
+}
+
+.card.imageCard img {
+  width: 100%;
+  height: 170px;
+}
+
+.markButton {
+  background-color: darkblue;
+  color: #fff;
   border-radius: 4px;
-  padding: 5px 10px;
+  padding: 4px;
 }
 
-.team_details:hover {
-  box-shadow: 0 0 10px red;
-  cursor: pointer;
+.our_team {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgb(0, 0, 0.1);
+  position: relative;
+  height: auto;
 }
 
-.team_details img {
-  width: 200px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 200px;
-  border-radius: 50%;
-}
-
-.teamate h4 {
-  font-size: 12px;
+.our_team h2 {
   text-align: center;
-  padding: 10px;
-  color: darkblue;
+  padding: 10px 12px 10px;
 }
-.teamate {
-  width: 200px;
-  margin: 0 auto;
+
+.btn.btn-primary.myAnchor {
+  padding: 3px;
+  font-size: 13px;
 }
-.teamate p {
+
+.card-text.myText {
   font-size: 12px;
   text-align: justify;
-  margin-bottom: 0;
-  margin-top: 3px;
-}
-
-.teamate mark {
-  background-color: #0eb6dd;
-  box-shadow: 0 0 10px black;
-  border-radius: 4px;
-  color: navy;
-  font-size: 11px;
-  padding: 3px;
-}
-
-.teamate span {
-  font-size: 12px;
-  background: #8e87de;
+  line-height: 25px;
   padding: 5px;
-  color: blue;
-  border-radius: 4px;
+  text-indent: 30px;
 }
 
-.teamate span:hover {
-  color: white;
-  transition: 0.3s;
-  opacity: 0.2s;
+.card.imageCard {
+  height: 450px;
 }
-/**About page CSS code start from here**/
+
+/**About page CSS code end from here**/
 
 /**Hospital Page CSS code start from here**/
 .hospital_list {

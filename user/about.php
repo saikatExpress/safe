@@ -35,96 +35,102 @@
                 </div>
             </div>
 
-            <div class="team_news">
+
+            <div class="our_team">
                 <h2>Our Team</h2>
 
-                <div class="team_details">
-                    <img src="images/arifur.jpg" alt="no images">
-                    <div class="teamate">
-                        <h4>Arifur Rahaman</h4>
-                        <mark>Team Supervisor</mark>
-                        <p>
-                            Hi..! I am Arifur Rahman.Co-ordinate and lecturer of CSE department at Sonargaon university.
-                        </p>
-                        <span> <i style="color: darkblue;" class="fa fa-envelope" aria-hidden="true"></i>
-                            arifurrahman@gmail.com</span>
+                <div class="team_info">
+                    <div class="main_card">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/arifur.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Arifur Rahman</h5>
+                                <mark class="markButton">Team Supervisor</mark>
+                                <p class="card-text myText">I am Arifur Rahman.I am Co-ordinator of CSE department at
+                                    Sonargaon
+                                    University.</p>
+                                <a href="https://mail.google.com/mail/u/0/" target="_blank"
+                                    class="btn btn-primary myAnchor">ar.arifbd65@gmail.com</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <hr>
+                    <div class="full_team_panel">
+                        <div class="card imageCard" style="width: 18rem;">
+                            <img class="card-img-top" src="images/saikat.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Shakawat Hosen Saikat</h5>
+                                <mark class="markButton">Team Leader</mark>
+                                <p class="card-text myText">I am Shakawat Hosen Saikat.I am student of CSE department at
+                                    Sonargaon
+                                    University.My ID : CSE1802014092 and Section : 16A1.I am working on PHP
+                                    Laravel,Javascript.I am a full stack web developer.</p>
+                                <a href="https://mail.google.com/mail/u/0/" target="_blank"
+                                    class="btn btn-primary myAnchor">saikathosen444@gmail.com</a>
+                            </div>
+                        </div>
 
-                <div class="team_details">
-                    <img src="images/saikat.jpg" alt="no images">
-                    <div class="teamate">
-                        <h4>Shakawat Hosen Saikat</h4>
-                        <mark>Team Leader</mark>
-                        <p>
-                            I am Shakawat Hosen Saikat.I am very glad for selected leader for my team.Leader is not my
-                            fashion.
-                        </p>
-                        <span> <i style="color: darkblue;" class="fa fa-envelope" aria-hidden="true"></i>
-                            saikathosen444@gmail.com</span>
-                    </div>
-                </div>
+                        <div class="card imageCard" style="width: 18rem;">
+                            <img class="card-img-top" src="images/masum.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Rafiqul Islam Masum</h5>
+                                <mark class="markButton">CEO & Founder</mark>
+                                <p class="card-text myText">I am Rafiqul Islam Masum.I am a student of CSE department at
+                                    Sonargaon University.My ID : CSE1803015066 and Section : 16A1.I am working on
+                                    Python,
+                                    Django,Javascript.</p>
+                                <a href="https://mail.google.com/mail/u/0/" target="_blank"
+                                    class="btn btn-primary myAnchor">mdrafiqulislammasum19@gmail.com</a>
+                            </div>
+                        </div>
 
-                <div class="team_details">
-                    <img src="images/masum.jpg" alt="no images">
-                    <div class="teamate">
-                        <h4>Rafiqul Islam Masum</h4>
-                        <mark>Ceo & Founder</mark>
-                        <p>
-                            I am Rafiqul Islam Masum.My team play an
-                            important role for developing this project.Thanks my team member's.
-                        </p>
-                        <span> <i style="color: darkblue;" class="fa fa-envelope" aria-hidden="true"></i>
-                            rafiqulmasum@gmail.com</span>
-                    </div>
-                </div>
+                        <div class="card imageCard" style="width: 18rem;">
+                            <img class="card-img-top" src="images/rubina1.jpeg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Rubina Yasmin Putul</h5>
+                                <mark class="markButton">Reporter</mark>
+                                <p class="card-text myText">I am Rubina Yasmin Putul.I am a student of CSE department at
+                                    Sonargaon University.My ID : CSE1803015066 and Section : 16A1.I am currently working
+                                    on
+                                    Content create,Reporting and testing software.</p>
+                                <a href="https://mail.google.com/mail/u/0/" target="_blank"
+                                    class="btn btn-primary myAnchor">rubiputul24@gmail</a>
+                            </div>
+                        </div>
 
-                <div class="team_details">
-                    <img src="images/juthe.jpg" alt="no images">
-                    <div class="teamate">
-                        <h4>Mitil da Cruze</h4>
-                        <mark>Art & Designer</mark>
-                        <p>
-                            I am Shakawat Hosen Saikat.I am very glad for selected leader for my team.Leader is not my
-                            fashion,My fashion is programing.
-                        </p>
-                        <span> <i style="color: darkblue;" class="fa fa-envelope" aria-hidden="true"></i>
-                            juthemitilda@gmail.com</span>
-                    </div>
-                </div>
 
-                <div class="team_details">
-                    <img src="images/41f0d4041175d8634c7acc92f9d23877.jpg" alt="no images">
-                    <div class="teamate">
-                        <h4>Rubina Islam Putul</h4>
-                        <mark>Reporter</mark>
-                        <p>
-                            I am Shakawat Hosen Saikat.I am very glad for selected leader for my team.Leader is not my
-                            fashion,My fashion is programing.
-                        </p>
-                        <span> <i style="color: darkblue;" class="fa fa-envelope" aria-hidden="true"></i>
-                            rubinaislam@gmail.com</span>
-                    </div>
-                </div>
+                        <div class="card imageCard" style="width: 18rem;">
+                            <img class="card-img-top" src="images/juthe.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Juthe Croze</h5>
+                                <mark class="markButton">Art & Designer</mark>
+                                <p class="card-text myText">I am Juthe Croze.I am a student of CSE department at
+                                    Sonargaon University.My ID : CSE1803015066 and Section : 16A1.I am currently working
+                                    on Frontend UI,design,art the user interface using with HTML,CSS.</p>
+                                <a href="https://mail.google.com/mail/u/0/" target="_blank"
+                                    class="btn btn-primary myAnchor">rubiputul24@gmail</a>
+                            </div>
+                        </div>
 
-                <div class="team_details">
-                    <img src="images/sajjad.jpg" alt="no images">
-                    <div class="teamate">
-                        <h4>Sajjad Hossain</h4>
-                        <mark>Bussiness Developer</mark>
-                        <p>
-                            I am Shakawat Hosen Saikat.I am very glad for selected leader for my team.Leader is not my
-                            fashion,My fashion is programing.
-                        </p>
-                        <span> <i style="color: darkblue;" class="fa fa-envelope" aria-hidden="true"></i>
-                            sajjadhossain@gmail.com</span>
+                        <div class="card imageCard" style="width: 18rem;">
+                            <img class="card-img-top" src="images/sajjad.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Sajjad Hossain</h5>
+                                <mark class="markButton">Bussiness Developer</mark>
+                                <p class="card-text myText">I am Sajjad Hossain.I am a student of CSE department at
+                                    Sonargaon University.My ID : CSE1803015066 and Section : 16A1.I am currently working
+                                    on project management system and bussiness development.</p>
+                                <a href="https://mail.google.com/mail/u/0/" target="_blank"
+                                    class="btn btn-primary myAnchor">Sdtanbir35@gmail.com</a>
+                            </div>
+                        </div>
+
+
                     </div>
+
                 </div>
             </div>
 
-            <div class="our_vision">
-                <h4>Our Vision</h4>
-            </div>
 
         </div>
     </div>

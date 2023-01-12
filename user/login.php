@@ -202,10 +202,11 @@ if (isset($_POST['submit'])) {
 
                 <label for="username">Username</label>
                 <input type="text" name="number" id="number" autocomplete="off" placeholder="Email or Phone"
-                    id="username">
+                    id="username" required="1">
 
                 <label for="password">Password</label>
-                <input class="ppp" type="password" placeholder="Password" name="pass" id="password" autocomplete="off">
+                <input class="ppp" type="password" placeholder="Password" name="pass" id="password" autocomplete="off"
+                    required="1">
 
                 <button type="submit" name="submit">Log In</button>
                 <div class="social">

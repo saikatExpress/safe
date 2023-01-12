@@ -2732,4 +2732,124 @@ label {
   background-color: #04aa6d;
   color: white;
 }
+
+.my_form_style {
+  width: 40%;
+  background-color: #fff;
+  margin-left: 635px;
+  box-shadow: 0 0 2px rgb(0, 0, 0.1);
+}
+
+.my_form_style input[type="text"] {
+  width: 100%;
+  padding: 10px 8px 12px;
+}
+
+.my_form_style label {
+  padding: 5px;
+}
+
+.my_form_style button {
+  padding: 5px;
+  background-color: darkblue;
+  color: #fff;
+  transition: all 0.4s;
+  border: none;
+  border-radius: 4px;
+  width: 120px;
+}
 /**Admin page CSS code end from here**/
+
+/**Admin Profile Page CSS start from here**/
+
+.admin_profile_style_area {
+  width: 100%;
+}
+
+.admin_form_style {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.admin_form_style img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin_form_style label {
+  display: block;
+  text-align: center;
+}
+
+.admin_form_style input[type="text"],
+input[type="file"],
+input[type="email"],
+select {
+  width: 70%;
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.admin_form_style input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  width: 100px;
+  border: none;
+  transition: 0.4s all;
+  background-color: darkblue;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.admin_form_style input[type="submit"]:hover {
+  background-color: green;
+}
+
+.headingTitle {
+  text-align: center;
+  padding: 10px 12px 10px;
+}
+
+.msg_div {
+  width: 200px;
+  background-color: darkgreen;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  left: 41%;
+}
+
+.msg_div a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 5px;
+}
+
+.dash_profile_img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.admin_create_panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin_create_panel button {
+  padding: 7px;
+  border: none;
+  background-color: darkblue;
+  transition: all 0.4s;
+  border-radius: 4px;
+  color: #fff;
+}
+/**Admin Profile Page CSS end from here**/
