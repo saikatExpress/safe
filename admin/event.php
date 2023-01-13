@@ -154,22 +154,36 @@ if (isset($_POST['submit'])) {
         $query = "SELECT * FROM admin_event";
         $data = $db->select($query);
         foreach ($data ?: [] as $value) { ?>
+
+
+        <?php
+
+            $start_date = date_create($value['start_date']);
+            $dateFormat = date_format($start_date, 'd M');
+            $end_date = date_create($value['end_date']);
+            $dateFormat1 = date_format($end_date, 'd M,Y');
+
+
+            ?>
+
         <div class="card cardStyle" style="width: 18rem;">
             <img class="card-img-top" src="upload/<?= $value['event_cover_photo'] ?>" alt="no images">
             <div class="card-body">
-                <h5 class="card-title"><?= $value['event_title'] ?></h5>
-                <p class="card-text"><?= substr($value['event_description'], 0, 95) . "..." ?></p>
+                <h5 style="color:#000;" class="card-title"><?= $value['event_title'] ?></h5>
+                <p style="color:#000;" class="card-text"><?= substr($value['event_description'], 0, 95) . "..." ?></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span>From </span><?= $value['start_date'] ?> <span>to
-                    </span><?= $value['end_date'] ?></li>
-                <li class="list-group-item"><span>Sponsored by : </span><?= $value['event_sponsor'] ?></li>
-                <li class="list-group-item"><span>Starting time : </span><?= $value['start_time'] ?></li>
+                <li style="color:#000;" class="list-group-item"><span style="font-weight: bold; color:#000;">From :
+                    </span><?= $dateFormat ?> <span> -
+                    </span><?= $dateFormat1 ?></li>
+                <li style="color:#000;" class="list-group-item"><span style="font-weight: bold; color:#000;">Sponsored
+                        by :
+                    </span><?= $value['event_sponsor'] ?></li>
+                <li style="color:#000;" class="list-group-item"><span style="font-weight: bold; color:#000;">Starting
+                        time :
+                    </span><?= $value['start_time'] ?></li>
             </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
+
         </div>
         <?php }
 

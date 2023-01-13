@@ -195,63 +195,61 @@
                 <!--Events HTML code start from here-->
                 <div class="event_news">
                     <div class="event-block">
-                        <h4 class="shadow-md event_head">Event <i style="color: #3707e6; margin-left:95px"
-                                class="fa fa-calendar" aria-hidden="true"></i></h4>
-                        <div class="event_control">
-                            <div class="event_date">
-                                <h6>15</h6>
-                                <h5>August</h5>
-                            </div>
-                            <div class="event_title">
-                                <h4>Police Conference</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                </p>
-                                <h6><a href="">View</a></h6>
-                            </div>
-                        </div>
+                        <h4 class="shadow-md event_head">
+                            Event <i style="color: #3707e6; margin-left:95px" class="fa fa-calendar"
+                                aria-hidden="true"></i>
+                        </h4>
+
+
+                        <?php
+
+                        $db = new DataBase();
+
+                        $query3 = "SELECT * FROM admin_event ORDER BY start_date DESC LIMIT 4";
+
+                        $data3 = $db->select($query3);
+
+                        if ($data3) {
+                            foreach ($data3 ?: [] as $value3) { ?>
+                        <?php
+
+                                $startDate = date_create($value3['start_date']);
+                                $startDayFormat = date_format($startDate, 'd');
+                                $startMonthFormat = date_format($startDate, 'F');
+                                $start_time = date_create($value3['start_time']);
+                                $startTimeFormat = date_format($start_time, 'h.ia');
+
+                                ?>
+
 
                         <div class="event_control">
                             <div class="event_date">
-                                <h6>15</h6>
-                                <h5>August</h5>
+                                <h6><?= $startDayFormat ?></h6>
+                                <h5><?= $startMonthFormat ?></h5>
                             </div>
                             <div class="event_title">
-                                <h4>Police Conference</h4>
+                                <h4><?= substr($value3['event_title'], 0, 15) ?></h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur
+                                    This event starting at sharp <b
+                                        style="font-size: 10px;color:blue;"><?= $startTimeFormat ?></b>.
                                 </p>
-                                <h6><a href="">View</a></h6>
+                                <h6><a href="view_event.php?e_id=<?= $value3['event_id'] ?>">View</a></h6>
                             </div>
                         </div>
 
-                        <div class="event_control">
-                            <div class="event_date">
-                                <h6>15</h6>
-                                <h5>August</h5>
-                            </div>
-                            <div class="event_title">
-                                <h4>Police Conference</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                </p>
-                                <h6><a href="">View</a></h6>
-                            </div>
-                        </div>
+                        <?php  }
+                        } else {
+                            echo "No running event's yet";
+                        }
 
-                        <div class="event_control">
-                            <div class="event_date">
-                                <h6>15</h6>
-                                <h5>August</h5>
-                            </div>
-                            <div class="event_title">
-                                <h4>Police Conference</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                </p>
-                                <h6><a href="">View</a></h6>
-                            </div>
-                        </div>
+
+                        ?>
+
+
+
+
+
+
                     </div>
                 </div>
                 <!--Events HTML code end from here-->

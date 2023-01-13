@@ -2263,8 +2263,7 @@ input[type="file"] {
 }
 
 .dashborad_div_item b {
-  background-color: darkblue;
-  color: #fff;
+  color: #000;
   padding: 5px;
   border-radius: 4px;
 }
@@ -2898,9 +2897,89 @@ select {
 
 .event_card {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .card.cardStyle {
   margin: 10px;
 }
 /**Event page CSS code end from here**/
+
+/***Notice page CSS code start from here***/
+.notice_form_style {
+  width: 40%;
+  padding: 5px;
+  box-shadow: 0 0 2px rgb(0, 0, 0.1);
+}
+
+.notice_form_style input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea {
+  width: 95%;
+  resize: none;
+  padding: 10px;
+  margin: 5px;
+}
+
+.noticeButton {
+  padding: 8px;
+  border: none;
+  background-color: darkblue;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.news_block_area {
+  background-color: #d3d3d3;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.notice_left_side_menu {
+  float: left;
+  width: 30%;
+}
+
+.notice_right_side_menu {
+  width: 65%;
+}
+
+.recent_notice_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent_notice_flex img {
+  width: 130px;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.recent_notice_block {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+}
+
+.recent_notice_flex p {
+  font-size: 15px;
+  padding: 4px;
+  text-align: justify;
+}
+
+.main_notice_flex {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+/***Notice page CSS code end from here***/
