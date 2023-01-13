@@ -2853,3 +2853,54 @@ select {
   color: #fff;
 }
 /**Admin Profile Page CSS end from here**/
+
+/**Event page CSS code start from here**/
+.event_form_block {
+  width: 50%;
+  box-shadow: 0 0 2px rgb(0, 0, 0.1);
+}
+
+.event_form input[type="text"],
+input[type="file"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 95%;
+  margin: 5px;
+  padding: 5px;
+  resize: none;
+}
+
+.event_form input[type="submit"] {
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  background-color: darkblue;
+  transition: all 0.4s;
+  border-radius: 4px;
+  color: #fff;
+  width: 120px;
+}
+
+.event_form input[type="submit"]:hover {
+  background-color: #0f1074;
+}
+
+.event_menu_header button {
+  padding: 8px;
+  border: none;
+  background-color: darkblue;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.event_card {
+  display: flex;
+}
+
+.card.cardStyle {
+  margin: 10px;
+}
+/**Event page CSS code end from here**/

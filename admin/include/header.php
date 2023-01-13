@@ -275,7 +275,9 @@ Session::checkSession();
 
                     <div class="admin_details">
                         <div class="admin_notification">
-                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            <a style="text-decoration: none;" href="admin_notice.php">
+                                <i class="fa fa-bell" aria-hidden="true"></i>
+                            </a>
                             <i class="fa fa-comments" aria-hidden="true"></i>
                         </div>
 
