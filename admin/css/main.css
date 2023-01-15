@@ -2333,6 +2333,11 @@ input[type="file"] {
   height: 500px;
   position: relative;
   margin-top: 5px;
+  width: 100%;
+}
+
+.thana {
+  width: 100%;
 }
 
 .station_police_div h4 {

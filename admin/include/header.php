@@ -52,6 +52,7 @@ Session::checkSession();
     <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style1.css" />
+    <link rel="stylesheet" href="css/myStyle.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
