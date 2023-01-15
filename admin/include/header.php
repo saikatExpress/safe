@@ -49,7 +49,9 @@ Session::checkSession();
     <link rel="stylesheet" href="css/slick-theme.css" />
 
 
+    <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style1.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -229,19 +231,19 @@ Session::checkSession();
             <div class="admin_header">
                 <div class="admin_header_style">
                     <div class="head_item">
-                        <form action="" method="post">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <input type="text" name="seacrh" id="seacrh">
-                                    </td>
-                                    <td>
-                                        <input type="submit" name="submit" value="Seacrh">
-                                    </td>
-                                </tr>
 
-                            </table>
-                        </form>
+                        <div class="head_item_anchor">
+                            <a href="police_complain_all.php">Police</a>
+                        </div>
+
+                        <div class="head_item_anchor">
+                            <a href="fireservice_complain_all.php">Fire Service</a>
+                        </div>
+
+                        <div class="head_item_anchor">
+                            <a href="ambulance_complain_all.php">Ambulance</a>
+                        </div>
+
                     </div>
 
                     <div class="social_icons">

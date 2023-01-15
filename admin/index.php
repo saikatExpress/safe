@@ -45,7 +45,7 @@
 
 
                     <button type="button" class="btn btn-primary">
-                        Request <span style="background-color: blue;"
+                        Request <span style="background-color: blue; color:#fff;"
                             class="badge badge-light"><?= $totalRequest ?></span>
                     </button>
 
@@ -86,7 +86,7 @@
                     <a href="pending_request.php">
 
                         <button id="pendingButton" type="button" class="btn btn-primary">
-                            Pending <span style="background-color: blue;"
+                            Pending <span style="background-color: blue; color:#fff;"
                                 class="badge badge-light"><?= $totalPending ?></span>
                         </button>
 
@@ -110,7 +110,7 @@
 
                     <a href="success_request.php">
                         <button type="button" class="btn btn-primary">
-                            Success <span style="background-color: blue;"
+                            Success <span style="background-color: blue; color:#fff;"
                                 class="badge badge-light"><?= $value2['REPID'] ?></span>
                         </button>
                     </a>
@@ -278,7 +278,7 @@
 
 
                     <button type="button" class="btn btn-primary">
-                        Request <span style="background-color: blue;"
+                        Request <span style="background-color: blue; color:#fff;"
                             class="badge badge-light"><?= $totalRequest ?></span>
                     </button>
 
@@ -319,7 +319,7 @@
                     <a href="fireservice_pending_request.php">
 
                         <button id="pendingButton" type="button" class="btn btn-primary">
-                            Pending <span style="background-color: blue;"
+                            Pending <span style="background-color: blue; color:#fff;"
                                 class="badge badge-light"><?= $totalPending ?></span>
                         </button>
 
@@ -343,7 +343,7 @@
 
                     <a href="fire_success_request.php">
                         <button type="button" class="btn btn-primary">
-                            Success <span style="background-color: blue;"
+                            Success <span style="background-color: blue; color:#fff;"
                                 class="badge badge-light"><?= $value2['REPID'] ?></span>
                         </button>
                     </a>
@@ -512,7 +512,7 @@
 
 
                     <button type="button" class="btn btn-primary">
-                        Request <span style="background-color: blue;"
+                        Request <span style="background-color: blue;color:#fff;"
                             class="badge badge-light"><?= $totalRequest ?></span>
                     </button>
 
@@ -553,7 +553,7 @@
                     <a href="ambulance_request.php">
 
                         <button id="pendingButton" type="button" class="btn btn-primary">
-                            Pending <span style="background-color: blue;"
+                            Pending <span style="background-color: blue; color:#fff;"
                                 class="badge badge-light"><?= $totalPending ?></span>
                         </button>
 
@@ -577,7 +577,7 @@
 
                     <a href="ambulance_success_request.php">
                         <button type="button" class="btn btn-primary">
-                            Success <span style="background-color: blue;"
+                            Success <span style="background-color: blue; color:#fff;"
                                 class="badge badge-light"><?= $value2['REPID'] ?></span>
                         </button>
                     </a>

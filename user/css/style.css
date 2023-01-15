@@ -381,7 +381,7 @@ body {
 
 .user_drop_anchor a {
   padding: 10px;
-  font-size: 20px;
+  font-size: 16px;
   color: #000;
   text-decoration: none;
   transition: all 0.4s;
@@ -392,7 +392,7 @@ body {
 }
 
 .user_drop_anchor button {
-  padding: 10px;
+  padding: 5px;
   font-size: 14px;
   background-color: darkblue;
   color: #fff;
@@ -1026,6 +1026,48 @@ body {
   box-sizing: border-box;
 }
 
+.social_icon_rel a i {
+  padding: 15px;
+  font-size: 25px;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.social_icon_rel a i:hover {
+  color: #003cf0;
+}
+
+.sponsor_item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsor_item_flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sponsor_item_img p {
+  font-size: 9px;
+  font-weight: 600;
+  color: darkcyan;
+  text-align: center;
+}
+
+.sponsor_item_img {
+  width: 45%;
+}
+
+.relTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: yellowgreen;
+}
+
 .copyright-class {
   margin-bottom: 10px;
   padding: 10px 15px;
@@ -1054,6 +1096,8 @@ body {
 
 .footer-desc h4 {
   font-size: 15px;
+  font-weight: 600;
+  color: yellowgreen;
 }
 
 .footer-desc p {
@@ -1068,8 +1112,10 @@ body {
 }
 
 .footer-list h4 {
-  font-size: 15px;
+  font-size: 18px;
   margin-left: 33px;
+  font-weight: 600;
+  color: yellowgreen;
 }
 
 .footer-list ul {
@@ -1079,6 +1125,16 @@ body {
 .footer-list ul li {
   font-size: 13px;
   padding: 3px;
+}
+
+.footer-list ul a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.footer-list ul a:hover {
+  color: #00e30e;
 }
 
 /**User profile CSS code start from here**/

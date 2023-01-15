@@ -66,6 +66,9 @@ body {
 .head_item {
   width: 550px;
   padding: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .head_item input[type="text"] {
@@ -162,6 +165,45 @@ body {
 .admin_header_style {
   display: flex;
   padding: 3px 6px;
+}
+
+.head_item_anchor {
+  position: relative;
+}
+
+.head_item_anchor a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 4px;
+  padding: 5px;
+  transition: all 0.4s;
+}
+
+.head_item_anchor a:hover {
+  color: #04aa6d;
+}
+
+.head_item_anchor a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  top: 50%;
+  left: 100%;
+}
+
+.head_item_anchor a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  top: 50%;
+  right: 100%;
 }
 
 .admin_details {

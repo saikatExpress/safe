@@ -70,7 +70,7 @@ Session::checkSession();
                 </div>
                 <div class="col-lg-4">
                     <div class="project_title">
-                        <h4 style="font-size: 20px;">Emergency Help Line</h4>
+                        <h4 style="font-size: 20px;">Emergency Help Service</h4>
                         <h6>Safe People , Serve people</h6>
                     </div>
                 </div>
