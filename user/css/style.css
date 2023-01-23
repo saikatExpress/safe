@@ -78,7 +78,7 @@ body {
 .stylish_form {
   width: 25%;
   padding: 10px;
-  background: #0000ffa3;
+  background: #000;
   color: white !important;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0.1);
@@ -4809,6 +4809,142 @@ i {
 
 /**Hospital List CSS end from here**/
 
+/**Password page CSS code start from here**/
+
+/**Password page CSS code end from here**/
+.password_header {
+  background-color: teal;
+}
+
+.pass_header_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pass_header_title h2 {
+  color: whitesmoke;
+  padding: 10px 12px 10px;
+  text-shadow: 1px 1px tomato;
+}
+
+.pass_header_left a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.password_form_block {
+  width: 30%;
+  background-color: teal;
+  margin: 150px 435px 69px;
+  padding: 10px 12px 10px;
+  border-radius: 4px;
+}
+
+.password_form_block label {
+  color: #fff;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.password_form_block input[type="email"] {
+  width: 100%;
+  padding: 10px 12px 10px;
+  margin: 5px 5px 5px;
+}
+
+.password_form_block input[type="submit"] {
+  padding: 8px;
+  width: 100px;
+  margin: 5px 6px 0;
+  background-color: darkblue;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.pass_P {
+  margin-bottom: 0;
+  padding: 5px;
+  font-size: 17px;
+  background: azure;
+  color: #000;
+  border-radius: 4px;
+}
+
+.pass_user_block {
+  display: flex;
+  align-items: center;
+}
+
+.pass_user_block img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.pass_user_block h4 {
+  font-size: 18px;
+  color: #fff;
+  padding: 8px 10px 8px;
+  margin: 5px;
+}
+
+.reset_pass a {
+  text-decoration: none;
+  color: yellow;
+  transition: all 0.4s;
+  font-size: 16px;
+  margin: 20px 50px 0;
+  padding: 8px 10px 8px;
+}
+
+.reset_pass_block {
+  background-color: teal;
+  width: 30%;
+  margin-top: 150px;
+  border-radius: 4px;
+  margin-left: 460px;
+  position: relative;
+  height: auto;
+}
+
+.reset_pass_block label {
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.reset_pass_block input[type="password"] {
+  width: 95%;
+  padding: 10px 12px 10px;
+  margin: 5px 5px 5px;
+}
+
+.reset_pass_block input[type="submit"] {
+  width: 100px;
+  padding: 10px 12px 10px;
+  margin: 5px 5px 5px;
+  background-color: darkblue;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.reset_msg p {
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  font-size: 17px;
+}
+
+.reset_msg a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+}
 /**Responsive media query start from here**/
 
 @media only screen and (max-width: 500px) {

@@ -1,4 +1,4 @@
-<?php include_once 'library/database.php'; ?>
+<?php include_once 'library/database.php';  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,6 @@
 
 <body>
 
-
     <header>
 
         <div class="password_header">
@@ -63,62 +62,55 @@
         </div>
     </header>
 
-    <div class="password_form">
-        <div class="password_form_block">
-            <form action="" method="post">
+    <section>
+
+
+
+        <div class="reset_password">
+            <div class="reset_pass_block">
+
 
                 <?php
 
                 $db = new DataBase();
 
+                if (isset($_GET['u_id'])) {
+                    $uid = $_GET['u_id'];
+                }
+
                 if (isset($_POST['submit'])) {
-                    $email = $_POST['email'];
+                    $pass = $_POST['pass'];
+                    $confirmPass = $_POST['confirmPass'];
 
-                    $query = "SELECT * FROM user_reg WHERE email = '$email'";
-
-                    $data = $db->select($query);
-
-                    if ($data) {
-                        foreach ($data ?: [] as $value) {
-                            $id = $value['id'];
-                            $query1 = "SELECT * FROM profile_pic WHERE u_id = '$id' ORDER BY id DESC LIMIT 1";
-                            $data1 = $db->select($query1);
-                            foreach ($data1 ?: [] as $value1) { ?>
-                <div class="pass_info">
-                    <div class="pass_user">
-
-                        <div class="pass_user_block">
-                            <img src="upload/<?= $value1['images'] ?>" alt="no image">
-                            <h4><?= $value['firstname'] . " " . $value['lastname'] ?></h4>
-                        </div>
-
-                        <div class="reset_pass">
-                            <a href="reset_password.php?u_id=<?= $value['id'] ?>">Set your new password</a>
-                        </div>
-
-                    </div>
+                    if ($pass != $confirmPass) {
+                        echo "password does not match";
+                    } else {
+                        $query = "UPDATE user_reg SET password = '$pass' , conpass = '$confirmPass' WHERE id = '$uid'";
+                        $data = $db->update($query);
+                        if ($data) { ?>
+                <div class="reset_msg">
+                    <p>Password reset Successfully</p>
+                    <a href="login.php">Back to login</a>
+                    <?= exit() ?>
                 </div>
-                <?= exit() ?>
                 <?php }
-                        }
-                    } else { ?>
-                <p class="pass_P">Email not found</p>
-                <?php }
+                    }
                 }
 
                 ?>
 
-                <label for="email">Enter your E-mail</label> <br>
-                <input type="email" name="email" required="1"> <br>
-                <input type="submit" name="submit" value="Submit">
-            </form>
+
+
+                <form action="" method="post">
+                    <label for="password">Set your new password : </label> <br>
+                    <input type="password" name="pass" id="pass" required="1"> <br>
+                    <label for="confirmPass">Re-type your password : </label> <br>
+                    <input type="password" name="confirmPass" id="confirmPass" required="1"> <br>
+                    <input type="submit" name="submit" value="Update">
+                </form>
+            </div>
         </div>
-
-
-    </div>
-
-
-
+    </section>
 </body>
 
 </html>
