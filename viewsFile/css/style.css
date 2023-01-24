@@ -79,3 +79,134 @@ body {
 .card.myCard {
   margin: 35px 70px 10px;
 }
+
+.column_para p {
+  text-align: justify;
+  line-height: 27px;
+  font-size: 13px;
+  padding: 5px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.column4 {
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.column4_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: darkblue;
+  border-radius: 4px;
+}
+
+.column4_title h4 {
+  padding: 5px;
+  margin-bottom: 0;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.column4_title img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.help_center_page {
+  padding: 10px 12px 10px;
+}
+
+.help_info ul li {
+  padding: 10px;
+  color: #000;
+  list-style: bengali;
+}
+
+.help_info ul li b {
+  color: maroon;
+}
+
+.complains_tutorial {
+  padding: 10px 12px 10px;
+  margin: 10px 10px 0;
+}
+
+.complains_tutorial h4 {
+  color: #000;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.complains_tutorial p {
+  margin: 10px 10px 10px;
+  padding: 10px;
+  color: #000;
+  font-size: 16px;
+}
+
+.complains_tutorial ul li {
+  list-style: disc;
+  padding: 10px;
+  color: #000;
+}
+
+.column_box {
+  padding: 10px 12px 10px;
+  position: relative;
+  height: auto;
+}
+
+.column_box h4 {
+  color: #000;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.column_box label {
+  padding: 6px;
+  color: #000;
+  font-size: 14px;
+}
+
+.column_box input[type="text"] {
+  padding: 8px;
+  margin: 5px 5px 5px;
+  width: 80%;
+}
+
+.column_box input[type="submit"] {
+  border: none;
+  background-color: darkblue;
+  color: #fff;
+  width: 120px;
+  margin: 10px 10px 10px;
+  padding: 8px 10px 8px;
+  border-radius: 4px;
+}
+
+.mycolumn img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+}
+
+.mycolumn h4 {
+  margin: 20px 40px;
+}
+.mycolumn p {
+  margin: 20px 40px;
+}
+
+.mycolumn mark {
+  margin: 10px 40px;
+  background-color: darkblue;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+}
